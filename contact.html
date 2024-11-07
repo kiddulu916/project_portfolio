@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact</title>
+        <link rel="stylesheet" href="./css/contact.css" />
+        <link rel="stylesheet" href="./css/all.css" />
+        <link rel="stylesheet" href="./css/fontawesome.css" />
+        <script src="./js/contact.js" defer></script>
+    </head>
+    <body>
+        <header id="header">
+            <div class="container container-nav">
+                <dic class="title">
+                    <h2 class="logo"><a href="./index.html">Corey Hilsenbeck</a></h2>
+                </dic>
+                <nav class="navbar">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="./index.html/#about-me">About Me</a></li>
+                        <li class="nav-item"><a href="./index.html/#projects">Projects</a></li>
+                        <li class="nav-item"><a href="./index.html/#skills">Skills</a></li>
+                        <li class="nav-item"><a href='./contact.html'>Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="contact">
+                <div class="contact-container">
+                    <div class="contact-title">
+                        <h2>Contact Me</h2>
+                    </div>
+                    <div class="contact-comment">
+                        <p> 
+                            Have an interesting project? Have a question about my codes?<br> Have any suggestions about how I can improve any of my codes?<br>  
+                            I accept all comments and criticisms of my projects. I would love to hear what you have to say!
+                        </p>
+                    </div>
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/chilsen"><i class="fab fa-linkedin-in fa-3x"></i></a>
+                        <a href="https://github.com/kiddulu916"><i class="fab fa-github fa-3x"></i></a>
+                        <a href="cor.hilsen@gmail.com"><i class="fas fa-envelope-square fa-3x"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xanyyjvj" method="post">
+                        <div class="grid-container">
+                            <fieldset id="fs-frm-inputs">
+                                <div class="grid-item">
+                                    <label for="full-name">Full Name</label>
+                                    <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                                </div>
+                                <div class="grid-item">
+                                    <label for="email-address">Email Address</label>
+                                    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+                                </div>
+                                <div class="grid-item">
+                                    <label for="message">Message</label>
+                                    <textarea rows="5" cols="30" name="message" id="message" placeholder="Write your comment here....." required=""></textarea>
+                                </div>
+                                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                                <div class="grid-item">
+                                    <input id="submit-button" type="submit" value="Submit">
+                                </div>
+                            </fieldset>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright &copy; 2024 Corey Hilsenbeck. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

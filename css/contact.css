@@ -1,0 +1,254 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #719fb0;
+}
+
+header {
+    background-color: #05004e;
+    border: 4px solid #fd5f00;
+    padding: 0;
+    box-shadow: 2px 2px 10px #f1f6f9;
+    border-radius: 20px;
+    margin-left: 7.5rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}  
+
+.title {
+    padding-bottom: 0.75rem;   
+}
+
+.title h2 {
+    font-size: 2.5rem;
+    color: #fd5f00;
+    margin: 0;
+    top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    text-align: center;
+}
+
+.title a {
+    color: #f9f8eb;
+    text-decoration: none;
+}
+
+
+.title a:hover,
+.title a:focus {
+    color: #fd5f00;
+}
+
+.navbar a {
+    font-size: 1.5rem;
+    color: #f9f8eb;
+    text-transform: uppercase;
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding-right: 1rem;
+}
+
+.navbar li {
+    margin-left: 2em;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    color: #fd5f00;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    height: auto;
+}
+
+.contact-title {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+}
+
+.contact-title h2 {
+    color: #f1f6f9;
+    font-size: 2.5rem;
+}
+
+.contact-comment p {
+    color: #f1f6f9;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 60%;
+    height: auto;
+    padding-bottom: 1rem;
+    padding-left: 7.5rem;   
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 60%;
+    height: auto;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left: 6.5rem;
+}
+
+.contact-links i {
+    color: #f1f6f9;
+    justify-content: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 5.5rem;
+}
+
+form label {
+    color: #f1f6f9;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+form input {
+    width: 100%;
+    padding: 0.5rem;
+    padding-right: 20rem;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+form fieldset {
+    border: none;
+    padding: 2rem;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+fieldset textarea {
+    width: 100%;
+    padding: 0.5rem;
+    padding-right: 20rem;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+#submit-button {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding-bottom: 0.5rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #f1f6f9;
+}
+
+@media (max-width: 640px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .container-nav {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    navbar ul {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    navbar li {
+        margin: 0.8em 0;
+        flex-wrap: wrap;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-comment {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .contact-container {
+        margin-left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
