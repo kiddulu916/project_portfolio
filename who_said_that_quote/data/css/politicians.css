@@ -1,6 +1,9 @@
 body {
     background-color: #00ACFF;
     font-family: Arial, sans-serif;
+    font-size: 0.5rem;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -12,48 +15,50 @@ body {
     padding: 0;
 }
 
-.timer-score {
+#timer-score {
     display: flex;
     justify-content: space-between;
     width: 80%;
     padding: 0;
-    margin-top: 1em;
+    margin-top: 10em;
+    margin-bottom: 3em;
     color: white;
     font-weight: bold;
 }
 
-#timer, #score {
-    font-size: 1.5em;
+.timer, .score {
+    font-size: 2vw;
     margin: 0;
 }
 
-.quote {
+#quote {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow-wrap: normal;
     width: 80%;
-    height: 5em;
-    padding: 2em;
+    height: 3em;
+    padding: 1.5em;
     margin-bottom: 1em;
     background-color: hsl(130, 100%, 30%);
-    border: 1em solid hsl(130, 100%, 21%);
+    border: 0.35em solid hsl(130, 100%, 21%);
     border-radius: 2em;
     color: white;
-    font-size: 1.5em;
+    font-size: 2vw;
+    font-weight: bold;
     text-align: center;
 }
 
-.answer-btns {
+#answer-buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
-    width: 90%;
+    width: 85%;
 }
 
 button {
-    padding: 1em;
-    font-size: 1em;
+    padding: 0.5em;
+    font-size: 2vw;
     justify-content: center;
     align-items: center;
     color: #fff;
@@ -61,21 +66,93 @@ button {
     text-decoration: none;
     font-weight: bold;
     background-color: hsl(130, 100%, 30%);
-    border: 1em solid hsl(130, 100%, 21%);
+    border: 0.35em solid hsl(130, 100%, 21%);
     border-radius: 2em;
-    height: 7em;
-    transition: background-color 0.3s;
+    height: 3.5em;
+    transition: background-color 0.3s, box-shadow 0.2s, ease-in-out;
 }
 
 button:hover {
     background-color: hsl(130, 100%, 40%);
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    background-color: hsl(130, 100%, 35%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#game-over {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+    transition: opacity 0.3s ease;
+}
+
+#game-over.visible {
+    display: flex;
+    opacity: 1;
+}
+
+#game-over {
+    opacity: 0;
+}
+
+#game-over.visible {
+    opacity: 1;
 }
 
 .game-over {
-    display: none;
+    margin: 1em;
 }
 
-.game-over.visible {
-    display: flex;
+@media (max-width: 600px) {
+    #timer-score {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .timer, .score {
+        font-size: 1.5em; /* Reduce font size for smaller screens */
+    }
+
+    #quote {
+        width: 90%; /* Allow the quote section to take more space on mobile */
+        font-size: 1.2em; /* Adjust font size */
+        padding: 1.5em;
+    }
+
+    button {
+        font-size: 1.2em; /* Increase button text size for better tapability */
+        height: 7em; /* Adjust button size */
+    }
+
+    /* Stack answer buttons vertically */
+    #answer-buttons {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        width: 90%;
+    }
+}
+
+/* For tablets (600px to 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    #quote {
+        width: 85%; /* Slightly smaller quote section */
+        font-size: 1.3em; /* Adjust for tablets */
+    }
+
+    .timer, .score {
+        font-size: 2em; /* Keep font size larger but not too big */
+    }
+
+    button {
+        font-size: 1.3em; /* Slightly larger button text */
+        height: 7.5em;
+    }
+
+    #answer-buttons {
+        grid-template-columns: 1fr 1fr; /* Two columns for tablets */
+    }
 }

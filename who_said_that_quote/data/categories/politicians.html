@@ -4,27 +4,27 @@
         <title>Politicians</title>
         <link rel="stylesheet" href="../css/politicians.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="../js/politicians.js" defer></script>
+        <script type="module" src="../js/politicians/main.mjs" defer></script>
         <meta charset="UTF-8">
     </head>
     <body>
         <div class="container">
-            <div class="timer-score">
-                <p id="timer">Time Left: 30</p>
-                <p id="score">Score: 0</p>
+            <div id="timer-score">
+                <p id="timer" class="timer">Time Left: 30</p>
+                <p id="score" class="score">Score: 0</p>
             </div>
-            <div class="quote">
-                <p id="quote"></p>
-                <div class="game-over">
-                    <button id="try-again" onClick="window.location.href='./politicians.html'">Try Again</button>
-                    <button id="new-category" onClick="window.location.href='./categories.html'">New Category</button>
+            <div id="quote">
+                <p class="quote"></p>
+                <div id="game-over" style="display: none;">
+                    <button id="try-again" class="game-over try-again">Try Again</button>
+                    <button id="new-category" class="game-over new-category">New Category</button>
                 </div>
             </div>
-            <div class="answer-btns">
-                <button class="btn" id="btn-1"></button>
-                <button class="btn" id="btn-2"></button>
-                <button class="btn" id="btn-3"></button>
-                <button class="btn" id="btn-4"></button>
+            <div id="answer-buttons">
+                <button class="answer-btns" aria-label="Option 1"></button>
+                <button class="answer-btns" aria-label="Option 2"></button>
+                <button class="answer-btns" aria-label="Option 3"></button>
+                <button class="answer-btns" aria-label="Option 4"></button>
             </div>
         </div>
     </body>
