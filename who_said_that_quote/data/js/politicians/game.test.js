@@ -1,4 +1,4 @@
-import game  from './game.mjs';
+import game from './game.mjs';
 import timer from './timer.mjs';
 import quoteData from './quoteData.mjs';
 import politicians from './politicians.mjs';
@@ -8,7 +8,9 @@ jest.mock('./timer.mjs', () => ({
   initialize: jest.fn(),
   start: jest.fn(),
   stop: jest.fn(),
-  reset: jest.fn()
+  reset: jest.fn(),
+  pause: jest.fn(),
+  resume: jest.fn(),
 }));
 
 jest.mock('./quoteData.mjs', () => ({
@@ -23,14 +25,14 @@ jest.mock('./quoteData.mjs', () => ({
     options: ['Author 1', 'Author 2'],
     index: 0
   })),
-  removeQuote: jest.fn()
+  removeQuote: jest.fn(),
 }));
 
 describe('Game Module', () => {
   let quoteElement, answerButtons, scoreElement, timerElement;
 
   beforeEach(() => {
-    // Set up DOM elements as Jest environment does not include them natively
+    // Set up DOM elements
     quoteElement = document.createElement('div');
     scoreElement = document.createElement('span');
     timerElement = document.createElement('div');
@@ -43,7 +45,7 @@ describe('Game Module', () => {
   });
 
   afterEach(() => {
-    jest.resetModules();
+    jest.clearAllMocks();
   });
 
   test('initializes the game correctly', () => {
@@ -73,19 +75,19 @@ describe('Game Module', () => {
 
     // Verify that quote is removed
     expect(quoteData.removeQuote).toHaveBeenCalledWith(0);
-    jest.clearAllMocks();
   });
 
   test('does not reset timer on wrong answer and continues game', () => {
     // Simulate wrong answer
     game.checkAnswer('Author 2', 'Author 1', 0);
 
-    // Verify that score and timer are not reset
-    expect(game.score).toBe(0); // Score should not change on a wrong answer
-    expect(timer.reset).not.toHaveBeenCalled();
-    expect(timer.stop).not.toHaveBeenCalled(); // Timer should not stop
+    // Verify that score does not change on a wrong answer
+    expect(game.score).toBe(0);
+    expect(scoreElement.textContent).toBe('0'); // Ensuring score display remains consistent
 
-    // Verify 
+    // Verify timer state remains active
+    expect(timer.reset).not.toHaveBeenCalled();
+    expect(timer.stop).not.toHaveBeenCalled();
   });
 
   test('handles game over when no quotes are left', () => {
@@ -103,5 +105,17 @@ describe('Game Module', () => {
 
     expect(quoteElement.textContent).toBe("Time's Up!");
     expect(timer.stop).toHaveBeenCalled();
+  });
+
+  test('pauses and resumes the game timer', () => {
+    game.start();
+    game.timer.pause();
+
+    expect(timer.pause).toHaveBeenCalled();
+    expect(timer.isRunning).toBe(false);
+
+    game.timer.resume();
+    expect(timer.resume).toHaveBeenCalled();
+    expect(timer.isRunning).toBe(true);
   });
 });

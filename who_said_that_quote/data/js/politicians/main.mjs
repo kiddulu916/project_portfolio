@@ -8,22 +8,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const answerButtons = document.querySelectorAll('.answer-btns');
   const scoreElement = document.getElementById('score');
   const timerElement = document.getElementById('timer');
+  const gameOverElement = document.getElementById('game-over');
+  const tryAgainButton = document.querySelector('.try-again');
+  const newCategoryButton = document.querySelector('.new-category');
 
+  // Ensure all essential DOM elements are available
+  if (!quoteElement || !scoreElement || !timerElement || answerButtons.length === 0) {
+    console.error('Missing essential DOM elements for game initialization.');
+    return;
+  }
+
+  // Initialize and start the game
   game.initialize(quoteElement, answerButtons, scoreElement, timerElement);
   game.start();
 
-  // Add event listeners for game over buttons
-  document.querySelector('.try-again').addEventListener('click', () => {
-    // Reset game state and start again
-    document.getElementById('game-over').style.display = 'none';
+  // Function to reset the game
+  function resetGame() {
+    gameOverElement.style.display = 'none';   // Hide game-over screen
     game.score = 0;
-    scoreElement.textContent = game.score;
-    quoteData.initialize(politicians);
+    scoreElement.textContent = game.score;    // Reset score display
+    quoteData.initialize(politicians);        // Reinitialize quotes
     game.start();
-  });
+  }
 
-  document.querySelector('.new-category').addEventListener('click', () => {
-    // Load new category of quotes and start game
-    window.location.href = './categories.html';
+  // Event listener for "Try Again" button
+  tryAgainButton.addEventListener('click', resetGame);
+
+  // Event listener for "New Category" button
+  newCategoryButton.addEventListener('click', () => {
+    window.location.href = './categories.html';  // Redirect to categories page
   });
 });
+

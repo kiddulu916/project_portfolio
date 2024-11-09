@@ -1,63 +1,75 @@
-import { clear } from "console";
-
 // timer.js
 const timer = {
   timeLeft: 30,
   isRunning: false,
   timerElement: null,
   paused: false,
-  intetvalId: null,
+  intervalId: null,
+  duration: 30,  // Default duration in seconds, can be customized
 
-  initialize(element) {
-    if (element && element instanceof HTMLElement) {
+  initialize(element, duration = 30) {
+    if (element instanceof HTMLElement) {
       this.timerElement = element;
+      this.duration = duration;  // Set duration to the provided value or default
+      this.timeLeft = duration;
+      this.updateDisplay();
     } else {
       console.error("Invalid timer element passed to initialize().");
     }
   },
 
   start(callback) {
-    if (this.isRunning) {
-      this.stop();
-    }
+    if (this.isRunning) this.stop();  // Stop any existing timer before starting a new one
 
     this.timeLeft = this.duration;
+    this.isRunning = true;
+    this.paused = false;
     this.intervalId = setInterval(() => {
       if (!this.paused) {
         this.timeLeft -= 1;
         this.updateDisplay();
+
         if (this.timeLeft <= 0) {
           clearInterval(this.intervalId);
-          callback();
+          this.isRunning = false;
+          callback();  // Trigger the callback when time runs out
         }
       }
     }, 1000);
-    this.isRunning = true;
   },
 
   pause() {
-    this.paused = true;
-    this.isRunning = false;
+    if (this.isRunning) {
+      this.paused = true;
+    }
   },
 
   resume() {
-    this.paused = false;
-    this.isRunning = true;
+    if (this.paused) {
+      this.paused = false;
+      this.isRunning = true;
+    }
   },
 
   stop() {
     clearInterval(this.intervalId);
     this.isRunning = false;
+    this.paused = false;
   },
 
-  reset() {
+  reset(newDuration = null) {
     this.stop();
-    this.timeLeft = 30;
+    if (newDuration !== null) this.duration = newDuration;
+    this.timeLeft = this.duration;
     this.updateDisplay();
   },
 
   updateDisplay() {
-    this.timerElement.textContent = `Time Left: ${this.timeLeft}`;
+    if (this.timerElement) {
+      this.timerElement.textContent = `Time Left: ${this.timeLeft}s`;
+    } else {
+      console.warn("Timer element not set. Unable to update display.");
+    }
   }
 };
 

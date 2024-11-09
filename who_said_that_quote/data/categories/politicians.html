@@ -1,31 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Politicians</title>
-        <link rel="stylesheet" href="../css/politicians.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="module" src="../js/politicians/main.mjs" defer></script>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <div class="container">
-            <div id="timer-score">
-                <p id="timer" class="timer">Time Left: 30</p>
-                <p id="score" class="score">Score: 0</p>
-            </div>
-            <div id="quote">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politicians Quiz</title>
+    <link rel="stylesheet" href="../css/politicians.css">
+    <script type="module" src="../js/politicians/main.mjs" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Politicians Quiz</h1>
+        </header>
+        
+        <div id="timer-score" role="status" aria-live="polite">
+            <p id="timer" class="timer">Time Left: 30</p>
+            <p id="score" class="score">Score: 0</p>
+        </div>
+        
+        <main id="quote-section">
+            <div id="quote" role="region" aria-live="polite">
                 <p class="quote"></p>
                 <div id="game-over" style="display: none;">
-                    <button id="try-again" class="game-over try-again">Try Again</button>
-                    <button id="new-category" class="game-over new-category">New Category</button>
+                    <button id="try-again" class="game-over try-again" aria-label="Restart the game">Try Again</button>
+                    <button id="new-category" class="game-over new-category" aria-label="Select a new category">New Category</button>
                 </div>
             </div>
-            <div id="answer-buttons">
-                <button class="answer-btns" aria-label="Option 1"></button>
-                <button class="answer-btns" aria-label="Option 2"></button>
-                <button class="answer-btns" aria-label="Option 3"></button>
-                <button class="answer-btns" aria-label="Option 4"></button>
-            </div>
+        </main>
+        
+        <div id="answer-buttons" aria-labelledby="quote-section" role="group">
+            <button class="answer-btns" id="answer1" aria-label="Answer option 1"></button>
+            <button class="answer-btns" id="answer2" aria-label="Answer option 2"></button>
+            <button class="answer-btns" id="answer3" aria-label="Answer option 3"></button>
+            <button class="answer-btns" id="answer4" aria-label="Answer option 4"></button>
         </div>
-    </body>
+    </div>
+</body>
 </html>
