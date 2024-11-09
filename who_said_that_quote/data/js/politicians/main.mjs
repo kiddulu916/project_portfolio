@@ -4,7 +4,7 @@ import politicians from './politicians.mjs';
 import quoteData from './quoteData.mjs';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const quoteElement = document.getElementById('quote');
+  const quoteElement = document.getElementById('quoteBox');
   const answerButtons = document.querySelectorAll('.answer-btns');
   const scoreElement = document.getElementById('score');
   const timerElement = document.getElementById('timer');

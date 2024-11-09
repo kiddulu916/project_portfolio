@@ -1,15 +1,14 @@
 // game.js
 import quoteData from './quoteData.mjs';
 import politicians from './politicians.mjs';
+import timer from './timer.mjs';
 
 const game = {
   quoteBox: null,
   answerBtns: null,
   scoreElement: null,
   score: 0,
-  paused: false,
   gameEnded: false,
-  timer: null,
 
   initialize(quoteElement, answerButtons, scoreElement, timerModule) {
     if (!quoteElement || !answerButtons || !scoreElement || !timerModule) {
@@ -17,14 +16,12 @@ const game = {
     }
     
     this.score = 0;
-    this.paused = false;
     this.gameEnded = false;
     this.quoteBox = quoteElement;
     this.answerBtns = Array.from(answerButtons);
     this.scoreElement = scoreElement;
-    this.timer = timerModule;
 
-    this.timer.initialize();
+    timer.initialize(timerModule);
     quoteData.initialize(politicians); // Assuming politicians is globally available
   },
 
@@ -33,7 +30,7 @@ const game = {
 
     if (quoteData.quotes.length > 0) {
       this.displayNewQuote();
-      this.timer.start(() => this.handleTimeUp());
+      timer.start(() => this.handleTimeUp());
     } else {
       this.gameOver();
     }
@@ -57,15 +54,13 @@ const game = {
   displayOptions(options) {
     const shuffledOptions = this.shuffleArray(options);
     this.answerBtns.forEach((btn, index) => {
-      if (shuffledOptions[index]) {
-        btn.textContent = shuffledOptions[index];
-        btn.disabled = false;
-      }
+      btn.textContent = shuffledOptions[index];
+      btn.disabled = false;
     });
   },
 
   setupEventListeners(correctAnswer, quoteIndex) {
-    const handleClick = () => {
+    const handleClick = (event) => {
       this.checkAnswer(event.target.textContent, correctAnswer, quoteIndex);
     };
 
@@ -78,8 +73,10 @@ const game = {
     if (selectedAnswer === correctAnswer) {
       this.updateScore(10);
       this.handleCorrectAnswer(quoteIndex);
+      this.start();
     } else {
       this.handleWrongAnswer();
+      this.displayNewQuote();
     }
   },
   
@@ -89,31 +86,47 @@ const game = {
   },
   
   handleCorrectAnswer(quoteIndex) {
+    timer.stop();
     this.endRound('Correct!');
-    this.timer.reset(); // Resets timer to 30 seconds for the next round
+    timer.reset(30); // Resets timer to 30 seconds for the next round
     quoteData.removeQuote(quoteIndex);
+
   },
 
   handleWrongAnswer() {
-    this.endRound('Wrong!');
-    this.timer.pause();
+    this.quoteBox.textContent = 'Wrong!';
+    timer.pause();
+    setTimeout(() => {
+      timer.resume();
+      quoteData.removeQuote(quoteIndex);
+    }, 1500);
   },
 
   handleTimeUp() {
+    timer.stop();
     this.endRound('Time\'s Up!');
-    this.timer.pause();
+    setTimeout(() => {
+      this.start();
+    }, 1500);
   },
 
   endRound(message) {
     this.quoteBox.textContent = message;
     this.answerBtns.forEach(btn => btn.disabled = true);
-    this.start();
+    setTimeout(() => this.start(), 2000);
   },
 
   gameOver() {
     this.gameEnded = true;
-    this.timer.stop();
+    timer.stop();
     this.quoteBox.textContent = `Game Over! Your score is ${this.score}.`;
+    this.answerBtns.forEach(btn => btn.disabled = true);
+    setTimeout(() => this.showGameOverBtns(), 1500);
+  },
+
+  // Show gameover buttons
+  showGameOverBtns() {
+    document.getElementById('game-over').style.display = 'flex';
   },
 
   shuffleArray(array) {
@@ -121,7 +134,7 @@ const game = {
       .map(value => ({ value, sort: Math.random() }))
       .sort((a, b) => a.sort - b.sort)
       .map(({ value }) => value);
-    }
-  };
+  }
+};
 
 export default game;

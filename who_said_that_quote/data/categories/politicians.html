@@ -9,18 +9,13 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Politicians Quiz</h1>
-        </header>
-        
         <div id="timer-score" role="status" aria-live="polite">
             <p id="timer" class="timer">Time Left: 30</p>
             <p id="score" class="score">Score: 0</p>
         </div>
-        
         <main id="quote-section">
             <div id="quote" role="region" aria-live="polite">
-                <p class="quote"></p>
+                <p class="quote" id="quoteBox"></p>
                 <div id="game-over" style="display: none;">
                     <button id="try-again" class="game-over try-again" aria-label="Restart the game">Try Again</button>
                     <button id="new-category" class="game-over new-category" aria-label="Select a new category">New Category</button>
