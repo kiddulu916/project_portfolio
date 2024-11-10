@@ -3,38 +3,89 @@ import politicians from "./politicians.mjs";
 // quoteData.js
 const quoteData = {
     quotes: [],
+    removedQuotes: [],
     authors: [],
-    options: [],
-  
+    removedAuthors: [],
+    quoteOptions: [],
+    removedOptions: [],
+    currentIndex: -1,
+
     initialize(politicians) {
         if (Array.isArray(politicians) && politicians.length > 0) {
             this.quotes = politicians.map(({ quote }) => quote);
             this.authors = politicians.map(({ author }) => author);
-            this.options = politicians.map(({ options }) => options);
+            this.quoteOptions = politicians.map(item => item.options);
+            this.removedQuotes = [];
         } else {
-            console.warn("No politicians provided");
+            console.warn("No politicians provided for initialization.");
+            this.quotes = [];
+            this.authors = [];
+            this.quoteOptions = [];
+            this.currentIndex = -1;
         }
     },
 
     getRandomQuote() {
-        const randomIndex = Math.floor(Math.random() * this.quotes.length);
-        return {
-            quote: this.quotes[randomIndex],
-            author: this.authors[randomIndex],
-            options: this.options[randomIndex]
+        if (this.quotes.length === 0) {
+            console.log("No quotes available.");
+            return null;
+        } 
+
+        let randomIndex = Math.floor(Math.random() * this.quotes.length);
+        let randomQuote = this.quotes[randomIndex];
+        let index = this.quotes.indexOf(randomQuote);
+        this.currentIndex = index;
+
+        return randomQuote;
+    },
+
+    getQuoteAuthor() {
+        if (this.authors.length === 0) {
+            console.log("No authors available.");
+            return null;
         }
+        let index = this.currentIndex;
+        let quoteAuthor = this.authors[index];
+
+        return quoteAuthor;
+    },
+
+    getQuoteOptions() {
+        if (this.quoteOptions.length === 0) {
+            console.log("No options available.");
+            return null;
+        }
+        let index = this.currentIndex;
+        let quoteOptions = this.quoteOptions[index];
+
+        return quoteOptions;
     },
 
     removeQuote(index) {
         if (index >= 0 && index < this.quotes.length) {
-            this.quotes.splice(index, 1);
-            this.authors.splice(index, 1);
-            this.options.splice(index, 1);
+            const removedQuote = this.quotes.splice(index, 1)[0];
+            this.removedQuotes.push(removedQuote);
+            const removedAuthor = this.authors.splice(index, 1)[0];
+            this.removedAuthors.push(removedAuthor);
+            const removedOptions = this.quoteOptions.splice(index, 1)[0];
+            this.removedOptions.push(removedOptions);
         } else {
             console.warn(`Invalid index for removing quote: ${index}`);
         }
+    },
+
+    resetRemovedQuotes() {
+        // Reset all removed quotes to the main list if needed for a new game or round
+        this.quotes = [...this.removedQuotes];
+        this.removedQuotes = [];
+        this.authors = [...this.removedAuthors];
+        this.removedAuthors = [];
+        this.options = [...this.removedOptions];
+        this.removedOptions = [];
+        this.currentIndex = -1;
     }
 };
+
   
 export default quoteData;
   

@@ -6,6 +6,7 @@
     <title>Politicians Quiz</title>
     <link rel="stylesheet" href="../css/politicians.css">
     <script type="module" src="../js/politicians/main.mjs" defer></script>
+    <script type="module" src="../js/politicians/game.mjs" defer></script>
 </head>
 <body>
     <div class="container">
@@ -16,9 +17,9 @@
         <main id="quote-section">
             <div id="quote" role="region" aria-live="polite">
                 <p class="quote" id="quoteBox"></p>
-                <div id="game-over" style="display: none;">
-                    <button id="try-again" class="game-over try-again" aria-label="Restart the game">Try Again</button>
-                    <button id="new-category" class="game-over new-category" aria-label="Select a new category">New Category</button>
+                <div id="game-over-btns">
+                    <button id="try-again" class="game-over" aria-label="Restart the game" onclick="resetGame()">Try Again</button>
+                    <button id="new-category" class="game-over" aria-label="Select a new category" onclick="window.location.href='./categories.html'">New Category</button>
                 </div>
             </div>
         </main>

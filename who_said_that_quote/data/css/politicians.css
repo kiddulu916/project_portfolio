@@ -22,7 +22,7 @@ body {
     justify-content: space-between;
     width: 80%;
     padding: 0;
-    margin-top: 6em;
+    margin-top: 3em;
     margin-bottom: 1.5em;
     color: white;
     font-weight: bold;
@@ -92,22 +92,33 @@ button:active {
 }
 
 /* Game Over Section */
-#game-over {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2em;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
 
-#game-over.visible {
-    display: flex;
-    opacity: 1;
+#game-over-btns {
+    display: none;
+    flex-direction: row;
+    align-items: center;
 }
 
 .game-over {
+    opacity: 0;  /* Start with hidden buttons */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
     margin: 1em;
+}
+
+.game-over button {
+    background-color: #00ACFF;
+    border: 0.35em solid #0071a9
+}
+
+.game-over button:hover {
+    background-color: #00eaff;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.game-over button:active {
+    background-color: #00d4ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Media Queries */
