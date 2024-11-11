@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    background-color: #00ACFF;
+    background-color: #00ff2a;
     font-family: Arial, sans-serif;
     font-size: 1rem; /* Use a base font size for consistency */
     margin: 0;
@@ -47,8 +47,8 @@ body {
     height: 4em;
     padding: 1.5em;
     margin-bottom: 1em;
-    background-color: hsl(130, 100%, 30%);
-    border: 0.35em solid hsl(130, 100%, 21%);
+    background-color: #009cf0;
+    border: 0.35em solid #00649a;
     border-radius: 2em;
     color: white;
     font-size: 2rem;
@@ -73,21 +73,21 @@ button {
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    background-color: hsl(130, 100%, 30%);
-    border: 0.35em solid hsl(130, 100%, 21%);
+    background-color: #009cf0;
+    border: 0.35em solid #00649a
     border-radius: 1.25em;
     height: 3.5em;
     transition: background-color 0.3s, box-shadow 0.2s ease-in-out;
 }
 
 button:hover {
-    background-color: hsl(130, 100%, 40%);
+    background-color: #16aeff;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 button:active {
-    background-color: hsl(130, 100%, 35%);
+    background-color: #1aafff);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -106,34 +106,34 @@ button:active {
 }
 
 #try-again {
-    background-color: #00ACFF;
-    border: 0.35em solid #0071a9;
+    background-color: #00ff2a;
+    border: 0.35em solid #007814;
 }
 
 #try-again:hover {
-    background-color: #00eaff;
+    background-color: #00ff95;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 #try-again:active {
-    background-color: #00d4ff;
+    background-color: #01d120;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #new-category {
-    background-color: #00ACFF;
-    border: 0.35em solid #0071a9;
+    background-color: #00ff2a;
+    border: 0.35em solid #007814;
 }
 
 #new-category:hover {
-    background-color: #00eaff;
+    background-color: #00ff95;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 #new-category:active {
-    background-color: #00d4ff;
+    background-color: #01d120;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 

@@ -1,5 +1,5 @@
 body {
-    background-color: #00ACFF;
+    background-color: #00ff2a;
 }
 
 .container {
@@ -44,8 +44,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: hsl(130, 100%, 30%);
-    border: 1em solid hsl(130, 100%, 21%);
+    background-color: #009cf0;
+    border: 1em solid #00649a;
     border-radius: 5em;
     padding: 1em;
     margin-bottom: 1em;
