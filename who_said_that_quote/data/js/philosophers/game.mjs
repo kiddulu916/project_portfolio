@@ -1,6 +1,6 @@
 // game.js
 import quoteData from './quoteData.mjs';
-import politicians from './politicians.mjs';
+import philosophers from './philosophers.mjs';
 import timer from '../timer.mjs';
 
 const game = {
@@ -26,7 +26,7 @@ const game = {
     this.scoreElement = scoreElement;
 
     timer.initialize(timerModule);
-    quoteData.initialize(politicians); // Assuming politicians is globally available
+    quoteData.initialize(philosophers);
   },
 
   start() {
@@ -57,8 +57,8 @@ const game = {
     if (!options || options.length === 0) {
         console.warn("No options provided to display.");
         this.answerBtns.forEach(btn => {
-            btn.textContent = "";  // Clear text content if no options
-            btn.disabled = true;   // Disable button since there's no answer
+            btn.textContent = "";
+            btn.disabled = true;
         });
         this.gameOver();
     } else {
@@ -71,8 +71,8 @@ const game = {
           btn.textContent = shuffledOptions[index];
           btn.disabled = false;
         } else {
-          btn.textContent = "";  // Clear text content if there are fewer options than buttons
-          btn.disabled = true;   // Disable extra buttons with no options
+          btn.textContent = "";
+          btn.disabled = true;  
         }
       });
     }

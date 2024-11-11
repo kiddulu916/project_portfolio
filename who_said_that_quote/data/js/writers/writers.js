@@ -1,4 +1,4 @@
-const authorsAndPoets = [
+const writers = [
     {
       quote: "Writing is like sex. First you do it for love, then you do it for your friends, and then you do it for money.",
       author: "Virginia Woolf",

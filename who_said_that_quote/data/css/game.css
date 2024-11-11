@@ -102,21 +102,37 @@ button:active {
 .game-over {
     opacity: 0;  /* Start with hidden buttons */
     transition: opacity 0.3s ease; /* Smooth opacity transition */
-    margin: 1em;
+    margin: 0.5em;
 }
 
-.game-over button {
+#try-again {
     background-color: #00ACFF;
-    border: 0.35em solid #0071a9
+    border: 0.35em solid #0071a9;
 }
 
-.game-over button:hover {
+#try-again:hover {
     background-color: #00eaff;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.game-over button:active {
+#try-again:active {
+    background-color: #00d4ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#new-category {
+    background-color: #00ACFF;
+    border: 0.35em solid #0071a9;
+}
+
+#new-category:hover {
+    background-color: #00eaff;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#new-category:active {
     background-color: #00d4ff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

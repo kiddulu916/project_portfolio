@@ -1,4 +1,4 @@
-import politicians from "./politicians.mjs";
+import celebrityQuotes from "./famous.mjs";
 
 // quoteData.js
 const quoteData = {
@@ -10,11 +10,11 @@ const quoteData = {
     removedOptions: [],
     currentIndex: -1,
 
-    initialize(politicians) {
-        if (Array.isArray(politicians) && politicians.length > 0) {
-            this.quotes = politicians.map(({ quote }) => quote);
-            this.authors = politicians.map(({ author }) => author);
-            this.quoteOptions = politicians.map(item => item.options);
+    initialize(celebrityQuotes) {
+        if (Array.isArray(celebrityQuotes) && celebrityQuotes.length > 0) {
+            this.quotes = celebrityQuotes.map(({ quote }) => quote);
+            this.authors = celebrityQuotes.map(({ author }) => author);
+            this.quoteOptions = celebrityQuotes.map(item => item.options);
             this.removedQuotes = [];
         } else {
             this.quotes = [];
@@ -51,7 +51,6 @@ const quoteData = {
 
     getQuoteOptions() {
         if (this.quoteOptions.length === 0) {
-            console.log("No options available.");
             return null;
         }
         let index = this.currentIndex;

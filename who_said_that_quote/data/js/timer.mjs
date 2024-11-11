@@ -38,19 +38,6 @@ const timer = {
     }, 1000);
   },
 
-  pause() {
-    if (this.isRunning) {
-      this.paused = true;
-    }
-  },
-
-  resume() {
-    if (this.paused) {
-      this.paused = false;
-      this.isRunning = true;
-    }
-  },
-
   stop() {
     clearInterval(this.intervalId);
     this.isRunning = false;

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Celebrity Quotes</title>
+        <link rel="stylesheet" href="../css/game.css">
+        <script type="module" src="../js/celebs/main.mjs" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <div id="timer-score" role="status" aria-live="polite">
+                <p id="timer" class="timer">Time Left: 30</p>
+                <p id="score" class="score">Score: 0</p>
+            </div>
+            <main id="quote-section">
+                <div id="quote" role="region" aria-live="polite">
+                    <p class="quote" id="quoteBox"></p>
+                    <div id="game-over-btns">
+                        <button id="try-again" class="game-over" aria-label="Restart the game" onclick="window.location.href='./famous.html'">Try Again</button>
+                        <button id="new-category" class="game-over" aria-label="Select a new category" onclick="window.location.href='./categories.html'">New Category</button>
+                    </div>
+                </div>
+            </main>
+
+            <div id="answer-buttons" aria-labelledby="quote-section" role="group">
+                <button class="answer-btns" id="answer1" aria-label="Answer option 1"></button>
+                <button class="answer-btns" id="answer2" aria-label="Answer option 2"></button>
+                <button class="answer-btns" id="answer3" aria-label="Answer option 3"></button>
+                <button class="answer-btns" id="answer4" aria-label="Answer option 4"></button>
+            </div>
+        </div>
+    </body>
+</html>

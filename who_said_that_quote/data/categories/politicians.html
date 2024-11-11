@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Politicians Quiz</title>
-    <link rel="stylesheet" href="../css/politicians.css">
+    <link rel="stylesheet" href="../css/game.css">
     <script type="module" src="../js/politicians/main.mjs" defer></script>
-    <script type="module" src="../js/politicians/game.mjs" defer></script>
 </head>
 <body>
     <div class="container">
@@ -18,7 +17,7 @@
             <div id="quote" role="region" aria-live="polite">
                 <p class="quote" id="quoteBox"></p>
                 <div id="game-over-btns">
-                    <button id="try-again" class="game-over" aria-label="Restart the game" onclick="resetGame()">Try Again</button>
+                    <button id="try-again" class="game-over" aria-label="Restart the game" onclick="window.location.href='./politicians.html'">Try Again</button>
                     <button id="new-category" class="game-over" aria-label="Select a new category" onclick="window.location.href='./categories.html'">New Category</button>
                 </div>
             </div>
