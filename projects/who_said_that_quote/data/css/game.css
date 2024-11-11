@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    background-color: #00ff2a;
+    background-color: #00b609;
     font-family: Arial, sans-serif;
     font-size: 1rem; /* Use a base font size for consistency */
     margin: 0;
@@ -74,7 +74,7 @@ button {
     text-decoration: none;
     font-weight: bold;
     background-color: #009cf0;
-    border: 0.35em solid #00649a
+    border: 0.35em solid #00649a;
     border-radius: 1.25em;
     height: 3.5em;
     transition: background-color 0.3s, box-shadow 0.2s ease-in-out;
@@ -106,7 +106,7 @@ button:active {
 }
 
 #try-again {
-    background-color: #00ff2a;
+    background-color: #00b609;
     border: 0.35em solid #007814;
 }
 
@@ -122,7 +122,7 @@ button:active {
 }
 
 #new-category {
-    background-color: #00ff2a;
+    background-color: #00b609;
     border: 0.35em solid #007814;
 }
 

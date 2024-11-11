@@ -200,3 +200,5 @@ const celebrityQuotes = [
     ]
   }
 ]
+
+export default famous;

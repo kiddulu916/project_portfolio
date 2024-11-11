@@ -1,6 +1,6 @@
 // game.js
 import quoteData from './quoteData.mjs';
-import celebrityQuotes from './famous.mjs';
+import entrepreneurs from './entrepreneurs.mjs';
 import timer from '../timer.mjs';
 
 const game = {
@@ -26,7 +26,7 @@ const game = {
     this.scoreElement = scoreElement;
 
     timer.initialize(timerModule);
-    quoteData.initialize(celebrityQuotes);
+    quoteData.initialize(entrepreneurs);
   },
 
   start() {

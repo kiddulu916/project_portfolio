@@ -131,4 +131,4 @@ const philosophers = [
   }
 ];
 
-export default philosopherQuotes;
+export default philosophers;

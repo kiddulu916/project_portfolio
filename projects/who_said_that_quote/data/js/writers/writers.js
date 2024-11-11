@@ -101,4 +101,4 @@ const writers = [
     }
 ];
 
-
+export default writers;
