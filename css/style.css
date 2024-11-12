@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-    font-size: 3.5em;
+    font-size: 5em;
     color: #fd5f00;
     margin: 0;
     padding-top: 0.35em;
@@ -21,7 +21,7 @@ h1 {
 }
 
 .subtitle {
-    font-size: 1.3em;
+    font-size: 2em;
     color: #f9f8eb;
     text-transform: uppercase;
     text-align: center;
@@ -61,7 +61,8 @@ nav li {
 }
 
 nav a {
-    font-size: 2em;
+    font-size: 2.5em;
+    font-weight: bold;
     color: #f9f8eb;
     text-transform: uppercase;
     text-decoration: none;
@@ -89,12 +90,14 @@ nav a:focus {
 .about-me-title {
     color: #fd5f00;
     text-align: center;
-    font-size: 3.5em;
+    font-size: 4em;
+    font-weight: bold;
     padding-bottom: 0.5em;
 }
 
 .about-me-text p {
-    font-size: 1.5em;
+    font-size: 2em;
+    font-weight: bold;
     text-align: center;
     padding-bottom: 0.5em;
 }
@@ -104,7 +107,7 @@ nav a:focus {
 }
 
 .about-me-image img {
-    width: 16em;
+    width: 50em;
     height: auto;
     border-radius: 100px;
     margin-left: 0.5em;
@@ -115,7 +118,7 @@ nav a:focus {
     color: #f9f8eb;
     text-align: center;
     font-weight: bold;
-    font-size: 3.5em;
+    font-size: 4em;
     text-decoration: underline;
     margin-top: 0.5em;
     padding-top: 0.5em; 
@@ -156,13 +159,13 @@ nav a:focus {
 .project-title {
     color: #fd5f00;
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 .project-description {
     color: #f9f8eb;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
     padding-bottom: 0.25em;
     flex-grow: 1;
 }
@@ -170,7 +173,7 @@ nav a:focus {
 .project-link {
     color: #f9f8eb;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
     padding-bottom: 0.25em;
 }
 
@@ -209,7 +212,7 @@ nav a:focus {
     color: #f9f8eb;
     text-align: center;
     font-weight: bold;
-    font-size: 3.5em;
+    font-size: 4em;
     text-decoration: underline;
     padding: 0;
     margin-top: 0.5em;
@@ -235,7 +238,7 @@ nav a:focus {
     width: 100%;
     justify-content: center;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.5em;
     padding: 0;
     margin-top: 0.5em;
     border-top: 4px solid #fd5f00;
