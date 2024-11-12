@@ -105,9 +105,12 @@ nav a:focus {
 }
 
 .about-me-image {
-    width: 10%;
-    height: 10%;
     order: -1;
+}
+
+.profile-pic {
+    width: 30%;
+    height: 30%;
 }
 
 .about-me-image img {
