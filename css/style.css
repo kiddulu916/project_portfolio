@@ -13,26 +13,25 @@ body {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3.5em;
     color: #fd5f00;
     margin: 0;
-    top: 0.5em;
+    top: 0.35em;
     margin-bottom: 0.5em;
-    padding-top: 0.5em;
     text-align: center;
 }
 
 .subtitle {
-    font-size: 1em;
+    font-size: 1.3em;
     color: #f9f8eb;
     text-transform: uppercase;
     text-align: center;
 }
 
 .container {
+    margin: 0 auto;
     width: 90%;
     max-width: 1500px;
-    margin: 0 auto;
 }
 
 .container-nav {
@@ -50,6 +49,7 @@ header {
     box-shadow: 2px 2px 10px #f1f6f9;
     border: 4px solid #fd5f00;
     border-radius: 20px;
+    margin-top: 1em;
 }
 
 nav ul {
@@ -63,7 +63,7 @@ nav li {
 }
 
 nav a {
-    font-size: 1.5em;
+    font-size: 2em;
     color: #f9f8eb;
     text-transform: uppercase;
     text-decoration: none;
@@ -85,18 +85,18 @@ nav a:focus {
     border-radius: 20px;
     padding: 1em;
     margin-top: 1em;
-    margin-left: 5em;
+    margin-left: 1em;
 }
 
 .about-me-title {
     color: #fd5f00;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 3.5em;
     padding-bottom: 0.5em;
 }
 
 .about-me-text p {
-    font-size: 1.25em;
+    font-size: 1.5em;
     text-align: center;
     padding-bottom: 0.5em;
 }
@@ -106,18 +106,18 @@ nav a:focus {
 }
 
 .about-me-image img {
-    width: 32.3em;
-    height: 32.3em;
-    border-radius: 400px;
-    margin-left: 2em;
-    margin-top: 4em;
+    width: 220em;
+    height: auto;
+    border-radius: 100px;
+    margin-left: 0.5em;
+    margin-top: 1em;
 }
 
 .projects-title {
     color: #f9f8eb;
     text-align: center;
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: 3.5em;
     text-decoration: underline;
     margin-top: 0.5em;
     padding-top: 0.5em; 
@@ -161,26 +161,6 @@ nav a:focus {
     font-size: 2em;
 }
 
-#project-2 .project-title {
-    margin-bottom: 5.5em;
-}
-
-#project-2 .project-description {
-    margin-bottom: 5em;
-}
-
-#project-3 .project-title {
-    margin-bottom: 5em;
-}
-
-#project-3 .project-description {
-    margin-bottom: 18.5em;
-}
-
-#project-3 .project-link {
-    margin-bottom: 14em;
-}
-
 .project-description {
     color: #f9f8eb;
     text-align: center;
@@ -206,13 +186,17 @@ nav a:focus {
 
 .project-image {
     margin-top: 2em;
+}
+
+.project-image img {
     width: 25.5em;
     height: 25.5em;
+    border-radius: 20px;
 }
 
 #projects {
     position: relative;
-    margin-top: 2em;
+    margin-top: 4em;
     border-top: 10px dashed #fd5f00;
 }
 
@@ -227,10 +211,10 @@ nav a:focus {
     color: #f9f8eb;
     text-align: center;
     font-weight: bold;
-    font-size: 2em;
-    text-decoration: none;
+    font-size: 3.5em;
+    text-decoration: underline;
     padding: 0;
-    margin-top: 1.5em;
+    margin-top: 0.5em;
 }
 
 .skills {
@@ -239,7 +223,6 @@ nav a:focus {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    margin: 0;
     padding: 0;
     margin-bottom: .5em;
 }
@@ -254,10 +237,10 @@ nav a:focus {
     width: 100%;
     justify-content: center;
     text-align: center;
-    font-size: 0.75em;
+    font-size: 1.2em;
     padding: 0;
-    margin: 0;
-    border-top: 3px solid #fd5f00;
+    margin-top: 0.5em;
+    border-top: 4px solid #fd5f00;
 }
 
 @media (max-width: 640px) {
