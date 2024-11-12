@@ -7,7 +7,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    margin-left: 1.3em;
+    margin-left: 4em;
     font-family: 'Roboto', sans-serif;
     background-color: #719fb0;
 }
@@ -178,6 +178,7 @@ nav a:focus {
 }
 
 .project-link a {
+    color: #1aff00;
     text-decoration: underline;
 }
 
@@ -190,8 +191,8 @@ nav a:focus {
 }
 
 .project-image img {
-    width: 25.5em;
-    height: 25.5em;
+    width: 35em;
+    height: auto;
     border-radius: 20px;
 }
 
