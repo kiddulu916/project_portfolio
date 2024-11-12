@@ -105,12 +105,12 @@ nav a:focus {
 }
 
 .about-me-image {
+    width: 30%;
+    height: 30%;
     order: -1;
 }
 
 .about-me-image img {
-    width: 30%;
-    height: 30%;
     border-radius: 400px;
     margin-left: 2rem;
     margin-top: 4rem;
