@@ -106,7 +106,7 @@ nav a:focus {
 }
 
 .about-me-image img {
-    width: 220em;
+    width: 32.3em;
     height: auto;
     border-radius: 100px;
     margin-left: 0.5em;
@@ -138,7 +138,7 @@ nav a:focus {
     display: flex;
     flex: 1;
     flex-direction: column;
-    width: 31.5%;
+    width: 33.3%;
     height: auto;
     justify-content: space-between;
     align-items: center;
