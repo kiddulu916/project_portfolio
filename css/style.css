@@ -108,11 +108,6 @@ nav a:focus {
     order: -1;
 }
 
-.profile-pic {
-    width: 30%;
-    height: 30%;
-}
-
 .about-me-image img {
     border-radius: 400px;
     margin-left: 2rem;
