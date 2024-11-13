@@ -24,6 +24,7 @@ body {
     width: 80%;
     padding: 0;
     margin-bottom: 0.5em;
+    margin-top: 2em;
     color: white;
     font-weight: bold;
 }
@@ -102,11 +103,11 @@ button:active {
 .game-over {
     opacity: 0;  /* Start with hidden buttons */
     transition: opacity 0.3s ease; /* Smooth opacity transition */
-    width: 30%;
+    width: 2em;
     height: auto;
     margin: 0.5em;
     padding: 0.5em;
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: bold;
 }
 
