@@ -1,4 +1,4 @@
-import celebrityQuotes from "./famous.mjs";
+import famous from "./famous.mjs";
 
 // quoteData.js
 const quoteData = {
@@ -10,11 +10,11 @@ const quoteData = {
     removedOptions: [],
     currentIndex: -1,
 
-    initialize(celebrityQuotes) {
-        if (Array.isArray(celebrityQuotes) && celebrityQuotes.length > 0) {
-            this.quotes = celebrityQuotes.map(({ quote }) => quote);
-            this.authors = celebrityQuotes.map(({ author }) => author);
-            this.quoteOptions = celebrityQuotes.map(item => item.options);
+    initialize(famous) {
+        if (Array.isArray(famous) && famous.length > 0) {
+            this.quotes = famous.map(({ quote }) => quote);
+            this.authors = famous.map(({ author }) => author);
+            this.quoteOptions = famous.map(item => item.options);
             this.removedQuotes = [];
         } else {
             this.quotes = [];

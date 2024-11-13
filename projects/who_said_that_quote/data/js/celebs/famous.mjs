@@ -1,4 +1,4 @@
-const celebrityQuotes = [
+const famous = [
   {
     quote: 'Life is very interesting… in the end, some of your greatest pains become your greatest strengths.',
     author: 'Drew Barrymore',

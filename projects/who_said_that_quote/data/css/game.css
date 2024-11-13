@@ -22,14 +22,13 @@ body {
     justify-content: space-between;
     width: 80%;
     padding: 0;
-    margin-top: 1.5em;
     margin-bottom: 1.5em;
     color: white;
     font-weight: bold;
 }
 
 .timer, .score {
-    font-size: 2vw; /* Using rem for better scalability */
+    font-size: 2rem; /* Using rem for better scalability */
     margin: 0;
 }
 
@@ -44,14 +43,14 @@ body {
     align-items: center;
     overflow-wrap: normal;
     width: 80%;
-    height: 6em;
-    padding: 1.5em;
-    margin-bottom: 1em;
+    height: 4em;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
     background-color: #009cf0;
     border: 0.35em solid #00649a;
     border-radius: 2em;
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
 }
@@ -66,7 +65,7 @@ body {
 
 button {
     padding: 0.5em;
-    font-size: 3rem; /* Adjusted for consistency */
+    font-size: 2rem; /* Adjusted for consistency */
     justify-content: center;
     align-items: center;
     color: #fff;
@@ -76,7 +75,7 @@ button {
     background-color: #009cf0;
     border: 0.35em solid #00649a;
     border-radius: 1.25em;
-    height: 2em;
+    height: 1.5em;
     transition: background-color 0.3s, box-shadow 0.2s ease-in-out;
 }
 

@@ -1,6 +1,6 @@
 // main.js
 import game from './game.mjs';
-import celebrityQuotes from './famous.mjs';
+import famous from './famous.mjs';
 import quoteData from './quoteData.mjs';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gameOverElement.style.display = 'none';   // Hide game-over screen
     game.score = 0;
     scoreElement.textContent = game.score;    // Reset score display
-    quoteData.initialize(celebrityQuotes);        // Reinitialize quotes
+    quoteData.initialize(famous);        // Reinitialize quotes
     game.start();
   }
 
