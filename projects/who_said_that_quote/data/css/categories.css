@@ -53,8 +53,8 @@ body {
 
 .cat-list a {
     text-decoration: none;
-    color: #fff;
-    font-size: em;
+    color: white;
+    font-size: 3em;
     font-weight: bold;
     padding: 1rem;
 }
