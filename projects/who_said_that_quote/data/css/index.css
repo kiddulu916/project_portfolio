@@ -40,7 +40,7 @@ body {
 .start-btn button {
     height: 100%;
     width: 35%;
-    font-size: 2vw;
+    font-size: 4vw;
     color: #fff;
 }
 
@@ -88,7 +88,7 @@ body {
     position: relative;
     padding: 12px 42px;
     border-radius: 12px;
-    font-size: 2vw;
+    font-size: 4vw;
     color: white;
     font-weight: bolder;
     background: #009cf0;
