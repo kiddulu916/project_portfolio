@@ -22,9 +22,8 @@ body {
     display: flex;
     justify-content: space-between;
     width: 80%;
-    padding: 0;
     margin-bottom: 0.5em;
-    margin-top: 2em;
+    padding-top: 3em;
     color: white;
     font-weight: bold;
 }
@@ -100,7 +99,7 @@ button:active {
     align-items: center;
 }
 
-.game-over {
+.game-over button {
     opacity: 0;  /* Start with hidden buttons */
     transition: opacity 0.3s ease; /* Smooth opacity transition */
     width: 2em;
