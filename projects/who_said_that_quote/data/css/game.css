@@ -102,17 +102,17 @@ button:active {
 .game-over button {
     opacity: 0;  /* Start with hidden buttons */
     transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+#try-again {
+    background-color: #00b609;
+    border: 0.35em solid #007814;
     width: 2em;
     height: auto;
     margin: 0.5em;
     padding: 0.5em;
     font-size: 3rem;
     font-weight: bold;
-}
-
-#try-again {
-    background-color: #00b609;
-    border: 0.35em solid #007814;
 }
 
 #try-again:hover {
@@ -129,6 +129,12 @@ button:active {
 #new-category {
     background-color: #00b609;
     border: 0.35em solid #007814;
+    width: 2em;
+    height: auto;
+    margin: 0.5em;
+    padding: 0.5em;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 #new-category:hover {
