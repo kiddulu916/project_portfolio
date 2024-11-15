@@ -256,6 +256,10 @@ nav a:focus {
         align-items: center;
     }
 
+    header {
+        margin-left: 1.5rem;
+    }
+
     h1 {
         font-size: 2.5rem;
     }
@@ -306,6 +310,11 @@ nav a:focus {
 
     .about-me-image {
         order: 0;
+        margin-left: 1.5rem;
+    }
+
+    #about-me {
+        margin-left: 2.5rem;
     }
     
     .about-me-text {
@@ -330,7 +339,8 @@ nav a:focus {
     }
     
     .projects-title {
-        font-size: 2rem; 
+        font-size: 2rem;
+        margin-left: 1rem; 
     }
     
     .projects-container {
@@ -338,6 +348,7 @@ nav a:focus {
         align-items: center;
         flex-direction: column;
         margin-left: 0;
+        margin-right: 0.5rem;
     }
     
     .project {
@@ -372,6 +383,7 @@ nav a:focus {
         
     .skills-title {
         font-size: 1.5rem;
+        margin-left: 0.5rem;
     }
     
     .skills {
@@ -379,6 +391,7 @@ nav a:focus {
         grid-template-columns: repeat(3, 1fr);
         column-gap: 0.25rem;
         row-gap: 0.25rem;
+        margin-left: 1.5rem;
     }
     
     .skills i {
@@ -389,5 +402,6 @@ nav a:focus {
     .footer {
         font-size: 1rem;
         margin-top: 1em;
+        margin-left: 1rem;
     }
 }
