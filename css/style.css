@@ -250,11 +250,14 @@ nav a:focus {
 @media (max-width: 640px) {
     body {
         width: 100%;
-        margin-left: 2rem;
+        margin-left: 1.5rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     .subtitle {
@@ -265,13 +268,25 @@ nav a:focus {
     }
     
     .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
     }
     
     .container-nav {
-        justify-content: center; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
     }
     
+    nav ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
     nav li {
         margin-left: 0;
     }
@@ -280,8 +295,23 @@ nav a:focus {
         font-size: 1.25rem;
         padding: 0.25em;
     }
+
+    .about-me-container {
+        width: 100%;
+        margin-left: 1.5rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-me-image {
+        order: 0;
+    }
     
     .about-me-text {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin-left: 0;
     }
     
@@ -306,9 +336,12 @@ nav a:focus {
     .projects-container {
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+        margin-left: 1.5rem;
     }
     
     .project {
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         flex-basis: 0;
@@ -335,28 +368,26 @@ nav a:focus {
     .project-image img {
         width: 100%;
         height: auto;
+    }
         
     .skills-title {
         font-size: 1.5rem;
     }
     
     .skills {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 1em;
-        flex-wrap: wrap;
-        flex-basis: calc(33.3%, 1fr);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 0.25rem;
+        row-gap: 0.25rem;
     }
     
     .skills i {
-        width: 4rem;
+        width: 2rem;
         height: auto;
     }
     
     .footer {
-        font-size: 0.75rem;
+        font-size: 1rem;
         margin-top: 1em;
     }
 }
