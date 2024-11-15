@@ -23,7 +23,7 @@ body {
     justify-content: space-between;
     width: 80%;
     margin-bottom: 0.5em;
-    padding-top: 3em;
+    padding-top: 5em;
     color: white;
     font-weight: bold;
 }
@@ -48,7 +48,7 @@ body {
     padding: 0.5em;
     margin-bottom: 0.5em;
     background-color: #009cf0;
-    border: 0.35em solid #00649a;
+    border: 0.2em solid #00649a;
     border-radius: 2em;
     color: white;
     font-size: 4rem;
@@ -74,7 +74,7 @@ button {
     text-decoration: none;
     font-weight: bold;
     background-color: #009cf0;
-    border: 0.35em solid #00649a;
+    border: 0.2em solid #00649a;
     border-radius: 1.25em;
     height: 3em;
     transition: background-color 0.3s, box-shadow 0.2s ease-in-out;
@@ -106,7 +106,7 @@ button:active {
 
 #try-again {
     background-color: #00b609;
-    border: 0.35em solid #007814;
+    border: 0.2em solid #007814;
     width: auto;
     height: auto;
     margin: 0.5em;
@@ -158,24 +158,24 @@ button:active {
     }
 
     .timer, .score {
-        font-size: 1.5rem; /* Reduced for mobile */
+        font-size: 1em; /* Reduced for mobile */
     }
 
     #quote {
-        width: 90%;
-        font-size: 1.2rem; /* Adjusted for smaller screens */
+        width: 80%;
+        font-size: 1em; /* Adjusted for smaller screens */
         padding: 1.5em;
     }
 
     button {
-        font-size: 1.5rem; /* Increased for mobile */
-        height: 7em;
+        font-size: 1em; /* Increased for mobile */
+        height: auto;
     }
 
     /* Stack answer buttons vertically on mobile */
     #answer-buttons {
         grid-template-columns: 1fr; /* Single column */
-        width: 90%;
+        width: 80%;
     }
 }
 
