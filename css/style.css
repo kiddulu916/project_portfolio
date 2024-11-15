@@ -214,7 +214,7 @@ nav a:focus {
     color: #f9f8eb;
     text-align: center;
     font-weight: bold;
-    font-size: 4vw;
+    font-size: 2vw;
     text-decoration: underline;
     padding: 0;
     margin-top: 0.5em;
@@ -227,11 +227,11 @@ nav a:focus {
     align-items: center;
     width: 100%;
     padding-bottom: 4em;
-    padding-left: 2em;
+    margin-left: 2em;
 }
 
 .skills i {
-    width: 8em;
+    width: 12em;
     height: auto;
     color: #f9f8eb;
 }
@@ -241,7 +241,7 @@ nav a:focus {
     width: 100%;
     justify-content: center;
     text-align: center;
-    font-size: 0.75vw;
+    font-size: 1.25vw;
     padding: 0;
     margin-top: 1em;
     border-top: 6px solid #fd5f00;
@@ -254,12 +254,12 @@ nav a:focus {
 
     body {
         width: 100%;
-        margin-left: 0;
+        margin-left: 1em;
     }
 
     header {
         width: 100%;
-        margin-left: 0;
+        padding: 0 1em;
     }
 
     .container {
@@ -267,7 +267,6 @@ nav a:focus {
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        margin-left: 0;
         padding: 0 1em;
     }
 
@@ -276,29 +275,27 @@ nav a:focus {
         justify-content: center;
         width: 100%;
         height: auto;
-        margin-left: 0;
+        padding: 0 1em;
     }
 
     h1 {
-        font-size: 2.5rem;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
-        margin-left: 0;
+        font-size: 3rem;
     }
 
     .subtitle {
         font-size: 1.5rem;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
-        margin-left: 0;
+        padding: 0;
+        padding-bottom: 0.5em;
     }
 
     nav ul {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     nav li {
-        margin-left: 0;
+        margin-left: 1em;
     }
 
     nav a {
@@ -311,12 +308,10 @@ nav a:focus {
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-left: 0;
     }
 
     .about-me-title {
         font-size: 2rem;
-        margin-left: 0;
     }
 
     .about-me-text {
@@ -324,17 +319,14 @@ nav a:focus {
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-left: 0;
     }
 
     .about-me-text p {
-        margin-left: 0;
         margin-top: 1em;
         font-size: 1.25rem;
     }
 
     .about-me-image img {
-        margin-left: 0;
         width: 100%;
         height: auto;
     }
@@ -344,33 +336,27 @@ nav a:focus {
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-left: 0;
     }
 
     .projects-title {
         font-size: 1.5rem;
-        margin-left: 0;
     }
 
     .project-content {
         font-size: 1.25rem;
-        margin-left: 0;
     }
 
     .project-title {
         font-size: 1.5rem;
-        margin-left: 0;
     }
     
     .project-description {
         font-size: 1.25rem;
-        margin-left: 0;
     }
 
     .project {
         flex-basis: 100%;
         width: 100%;
-        margin-left: 0;
         height: auto;
         margin-bottom: 1em;
     }
@@ -383,18 +369,24 @@ nav a:focus {
 
     .skills {
         display: flex;
-        flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        flex-wrap: wrap;
+        flex-basis: calc(33.33% - 1em);
         width: 100%;
         padding-bottom: 4em;
-        padding-left: 0;
+        padding-left: 0;    
     }
 
     .skills i {
         width: 4em;
         height: auto;
         color: #fff;
+    }
+
+    .footer {
+        font-size: 0.75rem;
+        padding: 0;
     }
 }
 
