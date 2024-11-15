@@ -125,15 +125,15 @@ body {
 
 @media (max-width: 600px) {
     .title img {
-        width: 50%; 
+        width: 80%; 
         height: auto;
         margin-top: 20vh;
     }
 
     .start-btn button {
-        width: 35%; 
-        font-size: 4em;
-        margin-top: 10vh;
+        width: 70%%; 
+        font-size: 5em;
+        margin-top: 5vh;
     }
 }
 

@@ -9,11 +9,10 @@ body {
     margin: 0;
     margin-left: 4em;
     font-family: 'Roboto', sans-serif;
-    background-color: #719fb0;
-}
+    background-color: #719fb0}
 
 h1 {
-    font-size: 5em;
+    font-size: 5vw;
     color: #fd5f00;
     margin: 0;
     padding-top: 0.35em;
@@ -21,7 +20,7 @@ h1 {
 }
 
 .subtitle {
-    font-size: 2em;
+    font-size: 2vw;
     color: #f9f8eb;
     text-transform: uppercase;
     text-align: center;
@@ -61,7 +60,7 @@ nav li {
 }
 
 nav a {
-    font-size: 2.5em;
+    font-size: 2.5vw;
     font-weight: bold;
     color: #f9f8eb;
     text-transform: uppercase;
@@ -90,13 +89,13 @@ nav a:focus {
 .about-me-title {
     color: #fd5f00;
     text-align: center;
-    font-size: 4em;
+    font-size: 4vw;
     font-weight: bold;
     padding-bottom: 0.5em;
 }
 
 .about-me-text p {
-    font-size: 2em;
+    font-size: 2vw;
     font-weight: bold;
     text-align: center;
     padding-bottom: 0.5em;
@@ -118,7 +117,7 @@ nav a:focus {
     color: #f9f8eb;
     text-align: center;
     font-weight: bold;
-    font-size: 4em;
+    font-size: 4vw;
     text-decoration: underline;
     margin-top: 1em;
     padding-top: 1em; 
@@ -159,13 +158,13 @@ nav a:focus {
 .project-title {
     color: #fd5f00;
     text-align: center;
-    font-size: 3em;
+    font-size: 3vw;
 }
 
 .project-description {
     color: #f9f8eb;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.5vw;
     font-weight: bold;
     padding-bottom: 0.25em;
     flex-grow: 1;
@@ -174,7 +173,7 @@ nav a:focus {
 .project-link {
     color: #f9f8eb;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.5vw;
     font-weight: bold;
     padding-bottom: 0.25em;
 }
@@ -215,7 +214,7 @@ nav a:focus {
     color: #f9f8eb;
     text-align: center;
     font-weight: bold;
-    font-size: 4em;
+    font-size: 4vw;
     text-decoration: underline;
     padding: 0;
     margin-top: 0.5em;
@@ -241,7 +240,7 @@ nav a:focus {
     width: 100%;
     justify-content: center;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     padding: 0;
     margin-top: 1em;
     border-top: 4px solid #fd5f00;
@@ -254,6 +253,12 @@ nav a:focus {
 
     .container-nav {
         flex-direction: column;
+    }
+
+    .title h1 {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+
     }
 
     nav ul {
@@ -275,11 +280,31 @@ nav a:focus {
 
     .about-me-image img {
         margin-left: 0;
+        width: 80%;
+        height: auto;
     }
 
     .projects-container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
+    }
+
+    .project {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .project-image img {
+        position: relative;
+        width: 80%;
+        height: auto;
+    }
+
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5em;
     }
 }
