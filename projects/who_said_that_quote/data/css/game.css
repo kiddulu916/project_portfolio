@@ -107,7 +107,7 @@ button:active {
 #try-again {
     background-color: #00b609;
     border: 0.35em solid #007814;
-    width: ;
+    width: auto;
     height: auto;
     margin: 0.5em;
     padding: 0.5em;
