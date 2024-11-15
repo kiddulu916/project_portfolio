@@ -248,104 +248,74 @@ nav a:focus {
 }
 
 @media (max-width: 640px) {
-    html {
-        font-size: 16px;
-    }
-
     body {
         width: 100%;
-        margin-left: 1em;
-    }
-
-    header {
-        width: 100%;
-        padding: 0 1em;
-    }
-
-    .container {
-        text-align: center;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        padding: 0 1em;
-    }
-
-    .container-nav {
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        height: auto;
-        padding: 0 1em;
+        margin-left: 2rem;
     }
 
     h1 {
         font-size: 3rem;
     }
-
+    
     .subtitle {
         font-size: 1.5rem;
-        padding: 0;
-        padding-bottom: 0.5em;
+        color: #f9f8eb;
+        text-transform: uppercase;
+        text-align: center;
     }
-
-    nav ul {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    
+    .container {
+        width: 100%;
     }
-
+    
+    .container-nav {
+        justify-content: center; 
+    }
+    
     nav li {
-        margin-left: 1em;
+        margin-left: 0;
     }
-
+    
     nav a {
         font-size: 1.25rem;
         padding: 0.25em;
     }
-
-    .about-me-container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .about-me-title {
-        font-size: 2rem;
-    }
-
+    
     .about-me-text {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+        margin-left: 0;
     }
-
+    
+    .about-me-title {
+        font-size: 1.5rem;
+    }
+    
     .about-me-text p {
-        margin-top: 1em;
         font-size: 1.25rem;
     }
-
+    
     .about-me-image img {
         width: 100%;
         height: auto;
+        margin-left: 0;
     }
-
+    
+    .projects-title {
+        font-size: 2rem; 
+    }
+    
     .projects-container {
-        flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    
+    .project {
+        justify-content: center;
+        align-items: center;
+        flex-basis: 0;
         width: 100%;
+        height: auto;
     }
-
-    .projects-title {
-        font-size: 1.5rem;
-    }
-
-    .project-content {
-        font-size: 1.25rem;
-    }
-
+    
     .project-title {
         font-size: 1.5rem;
     }
@@ -353,40 +323,40 @@ nav a:focus {
     .project-description {
         font-size: 1.25rem;
     }
-
-    .project {
-        flex-basis: 100%;
-        width: 100%;
-        height: auto;
-        margin-bottom: 1em;
+    
+    .project-link {
+        font-size: 1.25rem;
     }
-
+    
+    .project-image {
+        margin-top: 1em;
+    }
+    
     .project-image img {
-        position: relative;
         width: 100%;
         height: auto;
+        
+    .skills-title {
+        font-size: 1.5rem;
     }
-
+    
     .skills {
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        margin-top: 1em;
         flex-wrap: wrap;
-        flex-basis: calc(33.33% - 1em);
-        width: 100%;
-        padding-bottom: 4em;
-        padding-left: 0;    
+        flex-basis: calc(33.3%, 1fr);
     }
-
+    
     .skills i {
-        width: 4em;
+        width: 4rem;
         height: auto;
-        color: #fff;
     }
-
+    
     .footer {
         font-size: 0.75rem;
-        padding: 0;
+        margin-top: 1em;
     }
 }
-
