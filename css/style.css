@@ -248,7 +248,36 @@ nav a:focus {
 }
 
 @media (max-width: 412px) {
-    body, header, .container, .container-nav, .about-me-container, .about-me-text, .projects-container, .project {
+    body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    .container {
         width: 100%;
         margin: 0;
         display: flex;
@@ -257,20 +286,14 @@ nav a:focus {
         align-items: center;
     }
 
-    body {
-        height: 100vh;
-    }
-
-    h1, .subtitle, .about-me-title, .projects-title, .project-title, .skills-title {
+    .container-nav {
+        width: 100%;
         margin: 0;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
-    h1 { font-size: 2rem; }
-    .subtitle { font-size: 1.25rem; }
-    .about-me-title, .projects-title { font-size: 1.5rem; }
-    .project-title { font-size: 1.25rem; }
-    .skills-title { font-size: 1.25rem; }
 
     nav ul {
         width: 100%;
@@ -278,31 +301,114 @@ nav a:focus {
         padding: 0;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
 
-    nav li { margin: 0; }
+    nav li {
+        margin: 0;
+    }
 
     nav a {
         font-size: 1rem;
         padding: 0.5rem;
     }
 
-    .about-me-image, .project-image {
+    .about-me-container {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-me-image {
         width: 100%;
         margin: 0;
     }
 
-    .about-me-image img, .project-image img {
+    #about-me {
+        margin: 0;
+    }
+
+    .about-me-text {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-me-title {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .about-me-text p {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .about-me-image img {
         width: 100%;
         height: auto;
         margin: 0;
     }
 
-    #about-me, .about-me-text p, .project-description, .project-link {
+    .projects-title {
+        font-size: 1.5rem;
         margin: 0;
+    }
+
+    .projects-container {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 0;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    .project-description {
         font-size: 1rem;
-        text-align: center;
+        margin: 0;
+    }
+
+    .project-link {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .project-image {
+        margin-top: 0.5rem;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .skills-title {
+        font-size: 1.25rem;
+        margin: 0;
     }
 
     .skills {
@@ -310,7 +416,8 @@ nav a:focus {
         margin: 0;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 0.25rem;
+        column-gap: 0.25rem;
+        row-gap: 0.25rem;
     }
 
     .skills i {
@@ -321,11 +428,5 @@ nav a:focus {
     .footer {
         font-size: 0.75rem;
         margin: 0;
-        text-align: center;
-    }
-
-    .project-image {
-        margin-top: 0.5rem;
     }
 }
-
