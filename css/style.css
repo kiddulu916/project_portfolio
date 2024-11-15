@@ -252,6 +252,10 @@ nav a:focus {
         font-size: 16px;
     }
 
+    body {
+        width: 100%;
+    }
+
     .container {
         text-align: center;
         flex-direction: column;
@@ -266,7 +270,7 @@ nav a:focus {
         height: auto;
     }
 
-    .title h1 {
+    h1 {
         font-size: 2rem;
         padding-left: 0.5em;
         padding-right: 0.5em;
@@ -277,8 +281,8 @@ nav a:focus {
         flex-direction: column;
     }
 
-    .nav-items a {
-        font-size: 1.25rem;
+    nav a {
+        font-size: 1.5rem;
         padding: 0.25em;
     }
 
@@ -287,10 +291,14 @@ nav a:focus {
         align-items: center;
     }
 
+    .about-me-title {
+        font-size: 2rem;
+    }
+
     .about-me-text {
         margin-left: 0;
         margin-top: 1em;
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .about-me-image img {
@@ -304,6 +312,22 @@ nav a:focus {
         justify-content: center;
         align-items: center;
         width: 100%;
+    }
+
+    .projects-title {
+        font-size: 2rem;
+    }
+
+    .project-content {
+        font-size: 1.5rem;
+    }
+
+    .project-title {
+        font-size: 2rem;
+    }
+    
+    .project-description {
+        font-size: 1.5rem;
     }
 
     .project {
@@ -320,7 +344,7 @@ nav a:focus {
 
     .skills {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 0.25rem;
     }
 }
