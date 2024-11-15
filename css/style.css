@@ -250,7 +250,7 @@ nav a:focus {
 @media (max-width: 640px) {
     body {
         width: 100%;
-        margin-left: 1.5rem;
+        margin-left: 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -298,7 +298,7 @@ nav a:focus {
 
     .about-me-container {
         width: 100%;
-        margin-left: 1.5rem;
+        margin-left: 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -324,7 +324,7 @@ nav a:focus {
     }
     
     .about-me-image img {
-        width: 100%;
+        width: 22rem;
         height: auto;
         margin-left: 0;
     }
@@ -337,7 +337,7 @@ nav a:focus {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-left: 1.5rem;
+        margin-left: 0;
     }
     
     .project {
