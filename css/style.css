@@ -12,7 +12,7 @@ body {
     background-color: #719fb0}
 
 h1 {
-    font-size: 5vw;
+    font-size: 4vw;
     color: #fd5f00;
     margin: 0;
     padding-top: 0.35em;
@@ -20,7 +20,7 @@ h1 {
 }
 
 .subtitle {
-    font-size: 2vw;
+    font-size: 1vw;
     color: #f9f8eb;
     text-transform: uppercase;
     text-align: center;
@@ -60,7 +60,7 @@ nav li {
 }
 
 nav a {
-    font-size: 2.5vw;
+    font-size: 1.5vw;
     font-weight: bold;
     color: #f9f8eb;
     text-transform: uppercase;
@@ -89,13 +89,13 @@ nav a:focus {
 .about-me-title {
     color: #fd5f00;
     text-align: center;
-    font-size: 4vw;
+    font-size: 2vw;
     font-weight: bold;
     padding-bottom: 0.5em;
 }
 
 .about-me-text p {
-    font-size: 2vw;
+    font-size: 1vw;
     font-weight: bold;
     text-align: center;
     padding-bottom: 0.5em;
@@ -117,7 +117,7 @@ nav a:focus {
     color: #f9f8eb;
     text-align: center;
     font-weight: bold;
-    font-size: 4vw;
+    font-size: 2vw;
     text-decoration: underline;
     margin-top: 1em;
     padding-top: 1em; 
@@ -144,7 +144,7 @@ nav a:focus {
     align-items: center;
     background-color: #05004e;
     border: 4px solid #fd5f00;
-    border-radius: 20px;
+    border-radius: 40px;
     padding: 1em;
     margin: 0.5em;
 }
@@ -158,13 +158,13 @@ nav a:focus {
 .project-title {
     color: #fd5f00;
     text-align: center;
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 .project-description {
     color: #f9f8eb;
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 1vw;
     font-weight: bold;
     padding-bottom: 0.25em;
     flex-grow: 1;
@@ -173,7 +173,7 @@ nav a:focus {
 .project-link {
     color: #f9f8eb;
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 1vw;
     font-weight: bold;
     padding-bottom: 0.25em;
 }
@@ -194,7 +194,7 @@ nav a:focus {
 .project-image img {
     width: 40em;
     height: 40em;
-    border-radius: 20px;
+    border-radius: 40px;
 }
 
 #projects {
@@ -227,10 +227,11 @@ nav a:focus {
     align-items: center;
     width: 100%;
     padding-bottom: 4em;
+    padding-left: 2em;
 }
 
 .skills i {
-    width: 4em;
+    width: 8em;
     height: auto;
     color: #f9f8eb;
 }
@@ -240,22 +241,33 @@ nav a:focus {
     width: 100%;
     justify-content: center;
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 0.75vw;
     padding: 0;
     margin-top: 1em;
-    border-top: 4px solid #fd5f00;
+    border-top: 6px solid #fd5f00;
 }
 
 @media (max-width: 640px) {
+    html {
+        font-size: 16px;
+    }
+
     .container {
         text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding: 0 1em;
     }
 
     .container-nav {
         flex-direction: column;
+        width: 100%;
+        height: auto;
     }
 
     .title h1 {
+        font-size: 2rem;
         padding-left: 0.5em;
         padding-right: 0.5em;
 
@@ -265,22 +277,25 @@ nav a:focus {
         flex-direction: column;
     }
 
-    nav li {
-        margin: 0.8em 0;
+    .nav-items a {
+        font-size: 1.25rem;
+        padding: 0.25em;
     }
 
     .about-me-container {
         flex-direction: column;
+        align-items: center;
     }
 
     .about-me-text {
         margin-left: 0;
         margin-top: 1em;
+        font-size: 1rem;
     }
 
     .about-me-image img {
         margin-left: 0;
-        width: 80%;
+        width: 100%;
         height: auto;
     }
 
@@ -294,17 +309,18 @@ nav a:focus {
     .project {
         flex-basis: 100%;
         width: 100%;
+        margin-bottom: 1em;
     }
 
     .project-image img {
         position: relative;
-        width: 80%;
+        width: 100%;
         height: auto;
     }
 
     .skills {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 0.5em;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.25rem;
     }
 }
