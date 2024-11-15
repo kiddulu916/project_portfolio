@@ -254,6 +254,12 @@ nav a:focus {
 
     body {
         width: 100%;
+        margin-left: 0;
+    }
+
+    header {
+        width: 100%;
+        margin-left: 0;
     }
 
     .container {
@@ -261,44 +267,70 @@ nav a:focus {
         flex-direction: column;
         justify-content: center;
         width: 100%;
+        margin-left: 0;
         padding: 0 1em;
     }
 
     .container-nav {
         flex-direction: column;
+        justify-content: center;
         width: 100%;
         height: auto;
+        margin-left: 0;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
         padding-left: 0.5em;
         padding-right: 0.5em;
+        margin-left: 0;
+    }
 
+    .subtitle {
+        font-size: 1.5rem;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        margin-left: 0;
     }
 
     nav ul {
         flex-direction: column;
     }
 
+    nav li {
+        margin-left: 0;
+    }
+
     nav a {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         padding: 0.25em;
     }
 
     .about-me-container {
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        width: 100%;
+        margin-left: 0;
     }
 
     .about-me-title {
         font-size: 2rem;
+        margin-left: 0;
     }
 
     .about-me-text {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .about-me-text p {
         margin-left: 0;
         margin-top: 1em;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .about-me-image img {
@@ -312,27 +344,34 @@ nav a:focus {
         justify-content: center;
         align-items: center;
         width: 100%;
+        margin-left: 0;
     }
 
     .projects-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin-left: 0;
     }
 
     .project-content {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+        margin-left: 0;
     }
 
     .project-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin-left: 0;
     }
     
     .project-description {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+        margin-left: 0;
     }
 
     .project {
         flex-basis: 100%;
         width: 100%;
+        margin-left: 0;
+        height: auto;
         margin-bottom: 1em;
     }
 
@@ -343,8 +382,19 @@ nav a:focus {
     }
 
     .skills {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 0.25rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 4em;
+        padding-left: 0;
+    }
+
+    .skills i {
+        width: 4em;
+        height: auto;
+        color: #fff;
     }
 }
+
