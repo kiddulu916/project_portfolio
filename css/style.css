@@ -247,7 +247,7 @@ nav a:focus {
     border-top: 6px solid #fd5f00;
 }
 
-@media (max-width: 640px) {
+@media screen and (min-width: 400px) and (max-width: 600px) and (orientation: portrait) {
     body {
         width: 100%;
         margin-left: 0;
@@ -276,6 +276,7 @@ nav a:focus {
         justify-content: center;
         align-items: center;
         width: 100%;
+        margin-left: 1rem;
     }
     
     .container-nav {
@@ -321,7 +322,7 @@ nav a:focus {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-left: 0;
+        margin-left: 1.5rem;
     }
     
     .about-me-title {
