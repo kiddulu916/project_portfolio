@@ -301,7 +301,7 @@ nav a:focus {
     }
 
     .about-me-container {
-        width: 35rem;
+        width: 25rem;
         height: auto;
         margin-left: 0;
         flex-direction: column;
