@@ -301,7 +301,8 @@ nav a:focus {
     }
 
     .about-me-container {
-        width: 100%;
+        width: 35rem;
+        height: auto;
         margin-left: 0;
         flex-direction: column;
         justify-content: center;
@@ -313,7 +314,7 @@ nav a:focus {
     }
 
     #about-me {
-        margin-left: 1.5em;
+        margin-left: 3em;
     }
     
     .about-me-text {
@@ -338,6 +339,10 @@ nav a:focus {
         height: auto;
         margin-left: 0;
     }
+
+    #projects {
+        margin-left: 2em;
+    }
     
     .projects-title {
         text-align: center;
@@ -351,7 +356,7 @@ nav a:focus {
         align-items: center;
         flex-direction: column;
         margin-left: 0;
-        margin-right: 0.5em;
+        margin-right: 1em;
     }
     
     .project {
@@ -361,7 +366,7 @@ nav a:focus {
         flex-basis: 0;
         width: 100%;
         height: auto;
-        margin-right: 0.5em;
+        margin-right: 1.5em;
     }
     
     .project-title {
@@ -390,7 +395,7 @@ nav a:focus {
         
     .skills-title {
         font-size: 2rem;
-        padding-left: 1em;
+        padding-left: 2em;
     }
     
     .skills {
@@ -399,7 +404,7 @@ nav a:focus {
         justify-content: center;
         column-gap: 0.25rem;
         row-gap: 0.25rem;
-        margin-left: 3em;
+        margin-left: 6em;
     }
     
     .skills i {
@@ -408,7 +413,7 @@ nav a:focus {
     }
 
     footer {
-        margin-left: 1em;
+        margin-left: 2em;
     }
     
     .footer {
