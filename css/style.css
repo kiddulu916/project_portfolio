@@ -192,8 +192,8 @@ nav a:focus {
 }
 
 .project-image img {
-    width: 30em;
-    height: 30em;
+    width: 40em;
+    height: 40em;
     border-radius: 40px;
 }
 
@@ -247,17 +247,13 @@ nav a:focus {
     border-top: 6px solid #fd5f00;
 }
 
-@media screen and (min-width: 412px) and (max-width: 600px) and (orientation: portrait) {
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
     body {
         max-width: 412px;
         margin: 0 auto;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    header {
-        margin-left: 1.5rem;
     }
 
     h1 {
@@ -276,7 +272,6 @@ nav a:focus {
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-left: 1rem;
     }
     
     .container-nav {
@@ -311,25 +306,26 @@ nav a:focus {
 
     .about-me-image {
         order: 0;
-        margin-left: 1.5rem;
     }
 
-    #about-me {
-        margin-left: 2.5rem;
+    .about-me {
+        margin-left: 0;
     }
     
     .about-me-text {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-left: 1.5rem;
+        margin-left: 0;
     }
     
     .about-me-title {
+        text-align: center;
         font-size: 2rem;
     }
     
     .about-me-text p {
+        text-align: center;
         font-size: 1.5rem;
     }
     
@@ -340,8 +336,9 @@ nav a:focus {
     }
     
     .projects-title {
+        text-align: center;
         font-size: 2rem;
-        margin-left: 1rem; 
+        margin-left: 0; 
     }
     
     .projects-container {
@@ -362,14 +359,17 @@ nav a:focus {
     }
     
     .project-title {
+        text-align: center;
         font-size: 2rem;
     }
     
     .project-description {
+        text-align: center;
         font-size: 1.5rem;
     }
     
     .project-link {
+        text-align: center;
         font-size: 1.5rem;
     }
     
@@ -378,21 +378,22 @@ nav a:focus {
     }
     
     .project-image img {
-        width: 100%;
+        width: 15em;
         height: auto;
     }
         
     .skills-title {
         font-size: 2rem;
-        margin-left: 0.5rem;
+        margin-left: 0;
     }
     
     .skills {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
         column-gap: 0.25rem;
         row-gap: 0.25rem;
-        margin-left: 1.5rem;
+        margin-left: 0;
     }
     
     .skills i {
@@ -403,6 +404,6 @@ nav a:focus {
     .footer {
         font-size: 1.2rem;
         margin-top: 1em;
-        margin-left: 1rem;
+        margin-left: 0;
     }
 }
