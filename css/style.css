@@ -280,7 +280,7 @@ nav a:focus {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 0;
+        margin-left: 1em;
         padding: 0;
         width: 100%;
     }
@@ -317,7 +317,7 @@ nav a:focus {
         padding: 0;
         width: 100%;
         height: auto;
-        margin-left: 0;
+        margin-left: 2em;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -374,7 +374,7 @@ nav a:focus {
         position: relative;
         width: 100%;
         padding: 0;
-        margin-left: 5em;
+        margin-left: 4em;
     }
     
     .projects-title {
@@ -460,7 +460,7 @@ nav a:focus {
     .footer {
         width: 100%;
         padding: 0;
-        margin-left: 3em;
+        margin-left: 4em;
         font-size: 1.2rem;
         margin-top: 1em;
     }
