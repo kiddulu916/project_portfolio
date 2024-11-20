@@ -249,9 +249,10 @@ nav a:focus {
 
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
     body {
-        max-width: 412px;
+        max-width: 400px;
         width: 100%;
         margin: 0 auto;
+        padding: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -259,7 +260,8 @@ nav a:focus {
     }
 
     header {
-        margin-left: 3.5em;
+        margin-left: 5em;
+        padding: 1em auto;
     }
 
     h1 {
@@ -278,6 +280,8 @@ nav a:focus {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0 auto;
+        padding: 0.5em auto;
         width: 100%;
     }
     
@@ -285,7 +289,10 @@ nav a:focus {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; 
+        align-items: center;
+        width: 100%;
+        height: auto;
+        padding: 0.5em auto; 
     }
     
     nav ul {
@@ -306,6 +313,8 @@ nav a:focus {
     }
 
     .about-me-container {
+        display: flex;
+        padding: 0;
         width: 100%;
         height: auto;
         margin-left: 0;
@@ -324,6 +333,7 @@ nav a:focus {
         justify-content: center;
         align-items: center;
         margin-left: 0;
+        padding: 0.5em auto;
         text-align: center;
         font-size: 2rem;
     }
@@ -342,13 +352,14 @@ nav a:focus {
     #projects {
         position: relative;
         width: 100%;
-        margin-left: 2em;
+        padding: 0;
+        margin-left: 0;
     }
     
     .projects-title {
         text-align: center;
         font-size: 2rem;
-        padding-left: 1.5em;
+        padding: 0;
         margin-left: 0; 
     }
     
@@ -357,6 +368,7 @@ nav a:focus {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        padding: 0;
         margin-left: 0;
     }
     
@@ -367,6 +379,8 @@ nav a:focus {
         flex-basis: 0;
         width: 90%;
         height: auto;
+        padding: 0.5em auto;
+        margin-left: 0;
     }
     
     .project-title {
@@ -414,11 +428,14 @@ nav a:focus {
 
     footer {
         width: 100%;
+        padding: 0;
         margin-left: 0;
     }
     
     .footer {
         width: 100%;
+        padding: 0;
+        margin-left: 0;
         font-size: 1.2rem;
         margin-top: 1em;
     }
