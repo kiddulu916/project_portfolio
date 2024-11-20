@@ -166,7 +166,7 @@ button:active {
     #quote-section {
         width: 80%;
         font-size: 1em; /* Adjusted for smaller screens */
-        border: 0.5em solid #00649a;
+        border: 0.2em solid #00649a;
         height: auto;
         overflow-wrap: normal;
         margin: 0.5em;
@@ -181,7 +181,7 @@ button:active {
     /* Stack answer buttons vertically on mobile */
     #answer-buttons {
         grid-template-columns: 1fr; /* Single column */
-        width: 80%;
+        width: 90%;
     }
 
     #game-over-btns {
@@ -195,7 +195,7 @@ button:active {
         height: auto;
         width: auto;
         opacity: 1;  /* Show buttons on game over */
-        border: 0.5em solid #007814;
+        border: 0.2em solid #007814;
     }
 }
 
