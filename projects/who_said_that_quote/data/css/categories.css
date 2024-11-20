@@ -77,3 +77,16 @@ body {
     padding: 1rem;
 }
 
+@media  screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {    
+    #title {
+        font-size: 4em;
+    }
+    
+    #subtitle {
+        font-size: 1.5em;
+    }
+    
+    .cat-list a {
+        font-size: 1.2em;
+    }
+}
