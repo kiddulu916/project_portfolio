@@ -261,7 +261,7 @@ nav a:focus {
 
     header {
         margin-left: 5em;
-        padding: 1em auto;
+        padding: 0.5em auto;
     }
 
     h1 {
@@ -280,8 +280,8 @@ nav a:focus {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 0 auto;
-        padding: 0.5em auto;
+        margin: 0;
+        padding: 0;
         width: 100%;
     }
     
@@ -292,7 +292,7 @@ nav a:focus {
         align-items: center;
         width: 100%;
         height: auto;
-        padding: 0.5em auto; 
+        padding: 0; 
     }
     
     nav ul {
@@ -326,6 +326,13 @@ nav a:focus {
     .about-me-image {
         order: 0;
     }
+
+    .about-me-title {
+        text-align: center;
+        font-size: 2rem;
+        padding: 0;
+        margin-left: 0;
+    }
     
     .about-me-text {
         width: 100%;
@@ -349,6 +356,21 @@ nav a:focus {
         margin-left: 3em;
     }
 
+    .projects-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+        margin-left: 0;
+    }
+
+    .project-content {
+        padding: 0;
+    }
+
     #projects {
         position: relative;
         width: 100%;
@@ -365,6 +387,9 @@ nav a:focus {
     
     .projects-container {
         width: 100%;
+        height: auto;
+        display: flex;
+        flex: none;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -373,6 +398,9 @@ nav a:focus {
     }
     
     .project {
+        display: flex;
+        flex: none;
+        flex-basis: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
