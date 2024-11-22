@@ -89,13 +89,13 @@ nav a:focus {
 .about-me-title {
     color: #fd5f00;
     text-align: center;
-    font-size: 3vw;
+    font-size: 2em;
     font-weight: bold;
     padding-bottom: 0.5em;
 }
 
 .about-me-text p {
-    font-size: 1vw;
+    font-size: 1.5em;
     font-weight: bold;
     text-align: center;
     padding-bottom: 0.5em;
