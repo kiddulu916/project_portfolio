@@ -106,7 +106,7 @@ nav a:focus {
 }
 
 .about-me-image img {
-    width: 50em;
+    width: 70em;
     height: auto;
     border-radius: 100px;
     margin-left: 0.5em;
@@ -231,7 +231,7 @@ nav a:focus {
 }
 
 .skills i {
-    width: 12em;
+    width: 30em;
     height: auto;
     color: #f9f8eb;
 }
@@ -247,7 +247,7 @@ nav a:focus {
     border-top: 6px solid #fd5f00;
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 1024px) and (orientation: portrait) {
     body {
         max-width: 400px;
         width: 100%;
