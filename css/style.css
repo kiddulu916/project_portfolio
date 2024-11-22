@@ -249,8 +249,10 @@ nav a:focus {
 
 @media (max-width: 1024px) and (orientation: portrait) {
     body {
-        width: 100%;
+
+        width: 95%;
         margin: 0 auto;
+        margin-left: 0;
         padding: 0 auto;
         display: flex;
         flex-direction: column;
