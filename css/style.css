@@ -260,7 +260,7 @@ nav a:focus {
     }
 
     header {
-        margin-left: 7em;
+        margin-left: 0;
         padding: 0.5em auto;
     }
 
@@ -280,7 +280,7 @@ nav a:focus {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-left: 1em;
+        margin-left: 0;
         padding: 0;
         padding-left: 0;
         width: 100%;
@@ -319,7 +319,7 @@ nav a:focus {
         padding: 0;
         width: 100%;
         height: auto;
-        margin-left: 3em;
+        margin-left: 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -341,7 +341,7 @@ nav a:focus {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-left: 5em;
+        margin-left: 0;
         padding: 0.5em auto;
         text-align: center;
     }
@@ -355,7 +355,7 @@ nav a:focus {
     .about-me-image img {
         width: 22rem;
         height: auto;
-        margin-left: 5.5em;
+        margin-left: 0;
     }
 
     .projects-container {
@@ -377,7 +377,7 @@ nav a:focus {
         position: relative;
         width: 100%;
         padding: 0;
-        margin-left: 4em;
+        margin-left: 0;
     }
     
     .projects-title {
@@ -463,7 +463,7 @@ nav a:focus {
     .footer {
         width: 100%;
         padding: 0;
-        margin-left: 4em;
+        margin-left: 0;
         font-size: 1.2rem;
         margin-top: 1em;
     }
