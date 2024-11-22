@@ -249,7 +249,6 @@ nav a:focus {
 
 @media (max-width: 1024px) and (orientation: portrait) {
     body {
-        max-width: 400px;
         width: 100%;
         margin: 0 auto;
         padding: 0 auto;
@@ -438,7 +437,7 @@ nav a:focus {
         
     .skills-title {
         font-size: 2rem;
-        padding-left: 3.5em;
+        padding-left: 0;
     }
     
     .skills {
@@ -447,7 +446,7 @@ nav a:focus {
         justify-content: center;
         column-gap: 0.25rem;
         row-gap: 0.25rem;
-        padding-left: 6em;
+        padding-left: 0;
     }
     
     .skills i {
