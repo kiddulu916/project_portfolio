@@ -250,7 +250,7 @@ nav a:focus {
     body {
         width: 100%;
         margin: 0 auto;
-        margin-left: 4em;
+        margin-left: 0;
         padding: 0 auto;
         display: flex;
         flex-direction: column;
