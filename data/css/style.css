@@ -11,9 +11,9 @@ body {
     background-color: #719fb0}
 
 h1 {
-    font-size: 4.5em;
+    font-size: 5.5em;
     color: #fd5f00;
-    padding-left: 1em;
+    padding-left: 2em;
     text-align: center;
 }
 
@@ -22,8 +22,8 @@ h1 {
     color: #f9f8eb;
     text-transform: uppercase;
     text-align: center;
-    padding-left: 1em;
-    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-bottom: 3em;
 }
 
 .container {
@@ -52,7 +52,7 @@ h1 {
 nav ul {
     list-style: none;
     display: flex;
-    padding-right: 1em;
+    padding-right: 3em;
 }
 
 nav li {
@@ -89,13 +89,13 @@ nav a:focus {
 .about-me-title {
     color: #fd5f00;
     text-align: center;
-    font-size: 3.5em;
+    font-size: 4em;
     font-weight: bold;
     padding-bottom: 0.5em;
 }
 
 .about-me-text p {
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: bold;
     text-align: center;
     padding-bottom: 0.5em;
@@ -165,7 +165,7 @@ nav a:focus {
 .project-description {
     color: #f9f8eb;
     text-align: center;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: bold;
     padding-bottom: 0.25em;
     flex-grow: 1;
@@ -245,9 +245,9 @@ footer {
 @media (max-width: 1024px) and (orientation: portrait) {
     body {
         width: 100%;
-        margin: 0 auto;
+        margin: 1em;
         margin-left: 0;
-        padding: 0;
+        padding: 1em;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -255,6 +255,10 @@ footer {
     }
 
     #header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         margin-left: 1em;
         padding: 0;
@@ -262,11 +266,13 @@ footer {
 
     main {
         width: 100%;
-        margin-left: 0;
+        margin: 1em;
     }
 
     h1 {
-        font-size: 3.5em;
+        padding: 0.5em;
+        padding-left: 0;
+        font-size: 3em;
     }
     
     .subtitle {
@@ -274,6 +280,7 @@ footer {
         color: #f9f8eb;
         text-transform: uppercase;
         text-align: center;
+        padding-left: 0;
     }
     
     .container {
@@ -282,7 +289,7 @@ footer {
         justify-content: center;
         align-items: center;
         margin-left: 0;
-        padding: 0;
+        padding: 1em;
         padding-left: 0;
         width: 100%;
     }
@@ -304,7 +311,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0;
+        padding: 0.5em;
         margin: 0;
         padding-left: 0;
         margin-left: 0;
@@ -312,17 +319,27 @@ footer {
 
     nav li {
         margin: 0;
-        padding: 0;
+        padding: 0.25em;
         padding-left: 0;
         margin-left: 0;
     }
     
     nav a {
-        font-size: 3em;
+        font-size: 2em;
         margin: 0;
         padding: 0;
         padding-left: 0;
         margin-left: 0;
+    }
+
+    #about-me {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        margin-left: 2em;
     }
 
     .about-me-container {
@@ -343,7 +360,7 @@ footer {
 
     .about-me-title {
         text-align: center;
-        font-size: 3.5em;
+        font-size: 2.5em;
         margin: 0;
         padding: 0;
         margin-left: 0;
@@ -394,16 +411,16 @@ footer {
     #projects {
         position: relative;
         width: 100%;
-        padding: 0;
+        padding: 1em;
         padding-left: 0;
         margin: 0;
-        margin-left: 0;
+        margin-left: 2em;
     }
     
     .section-header {
         text-align: center;
-        font-size: 3.5em;
-        padding: 0;
+        font-size: 3em;
+        padding: 0.5em;
         padding-left: 0;
         margin: 0;
         margin-left: 0; 
@@ -440,9 +457,15 @@ footer {
         width: 15em;
         height: auto;
     }
+
+    #skills {
+        width: 100%;
+        margin-left: 2em;
+        padding: 1em;
+    }
         
     .skills-header {
-        font-size: 3.5em;
+        font-size: 3em;
         padding-left: 1em;
     }
     
@@ -453,12 +476,12 @@ footer {
         column-gap: 0.25rem;
         row-gap: 0.25rem;
         margin-left: 1em;
-        padding-left: 0;
+        padding-left: 1em;
     }
     
     .skills i {
         font-size: 5em;
-        margin-left: 1em;
+        margin-left: 0;
         padding-left: 0;
         height: auto;
     }
@@ -467,7 +490,7 @@ footer {
         width: 100%;
         padding: 0;
         font-size: 1.5em;
-        margin-left: 0.5em;
+        margin-left: 1em;
         margin-top: 1em;
     }
 }
