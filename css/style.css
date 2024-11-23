@@ -89,13 +89,13 @@ nav a:focus {
 .about-me-title {
     color: #fd5f00;
     text-align: center;
-    font-size: 2em;
+    font-size: 4em;
     font-weight: bold;
     padding-bottom: 0.5em;
 }
 
 .about-me-text p {
-    font-size: 1.5em;
+    font-size: 2.5em;
     font-weight: bold;
     text-align: center;
     padding-bottom: 0.5em;
@@ -106,7 +106,7 @@ nav a:focus {
 }
 
 .about-me-image img {
-    width: 70em;
+    width: 50em;
     height: auto;
     border-radius: 100px;
     margin-left: 0.5em;
@@ -119,7 +119,6 @@ nav a:focus {
     font-weight: bold;
     font-size: 3vw;
     text-decoration: underline;
-    margin-top: 1em;
     padding-top: 1em; 
 }
 
@@ -164,7 +163,7 @@ nav a:focus {
 .project-description {
     color: #f9f8eb;
     text-align: center;
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-weight: bold;
     padding-bottom: 0.25em;
     flex-grow: 1;
@@ -173,7 +172,7 @@ nav a:focus {
 .project-link {
     color: #f9f8eb;
     text-align: center;
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-weight: bold;
     padding-bottom: 0.25em;
 }
@@ -231,7 +230,7 @@ nav a:focus {
 }
 
 .skills i {
-    width: 60em;
+    width: 100%;
     height: auto;
     color: #f9f8eb;
 }
@@ -243,7 +242,7 @@ nav a:focus {
     text-align: center;
     font-size: 0.75vw;
     padding: 0;
-    margin-top: 1em;
+    margin-top: 1.5em;
     border-top: 6px solid #fd5f00;
 }
 
@@ -261,8 +260,12 @@ nav a:focus {
     }
 
     header {
-        margin-left: 0;
+        margin-left: 2em;
         padding: 0.5em auto;
+    }
+
+    main {
+        margin-left: 2em;
     }
 
     h1 {
@@ -459,12 +462,12 @@ nav a:focus {
     footer {
         width: 100%;
         padding: 0;
+        margin-left: 2em;
     }
     
     .footer {
         width: 100%;
         padding: 0;
-        margin-left: 0;
         font-size: 1.2rem;
         margin-top: 1em;
     }
