@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--
+            meta tags:
+                - charset: sets character encoding for page
+                - viewport: sets how page should be displayed on different devices
+                - description: sets meta description for search engines
+        -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Corey Hilsenbeck's project portfolio showcasing web development skills and projects">
+
+        <!--
+            title tag: sets title for page
+        -->
         <title>Project Portfolio</title>
+
+        <!--
+            link tags: link to external stylesheets
+        -->
         <link rel="stylesheet" href="./data/css/style.css">
         <link rel="stylesheet" href="./data/css/all.min.css">
         <link rel="stylesheet" href="./data/css/fontawesome.min.css">
         <link rel="stylesheet" href="./data/css/brands.css">
     </head>
     <body>
+        <!--
+            header element: contains main navigation and site branding
+        -->
         <header id="header">
+            <!--container: centers content and sets max width-->
             <div class="container container-nav">
+                
+                <!--site-branding: contains site title and subtitle-->
                 <div class="site-branding">
                     <h1>Corey Hilsenbeck</h1>
                     <p class="subtitle">Project Portfolio</p>
                 </div>
+                
+                <!--nav element: contains main navigation-->
                 <nav aria-label="Main Navigation">
+                    
+                    <!--ul element: contains navigation items-->
                     <ul class="nav-items">
+                        
+                        <!--li elements: contains navigation item links-->
                         <li><a href="#about-me">About Me</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#skills-title">Skills</a></li>
@@ -28,11 +54,19 @@
             </div>
         </header>
         <main>
+            
+            <!--section element: contains information about the author-->
             <section id="about-me">
+                
+                <!--div element: contains the author's profile information-->
                 <div class="about-me-container">
+                    
+                    <!--div element: contains the author's profile picture-->
                     <div class="about-me-image">
                         <img class="profile-pic" src="./data/images/me.jpg" alt="A picture of Corey Hilsenbeck">
                     </div>
+                    
+                    <!--div element: contains the author's bio-->
                     <div class="about-me-text">
                         <h2 class="about-me-title">About Me</h2>
                         <p>
@@ -55,18 +89,32 @@
                     </div>
                 </div>
             </section>
+
+            <!--section element: start of projects section-->
             <section id="projects">
+
+                <!--header element: contains section title-->
                 <header class="section-header">
                     <h2>Projects</h2>
                 </header>
+
+                <!--div element: contains projects-->
                 <div class="projects-container"> 
-                    <div class="project">
+
+                    <!--div element: contains project 1 information-->
+                    <div class="project" id="project-1">
+
+                        <!--div element: contains project image-->
                         <div class="project-image">
                             <img src="./data/images/game.png" alt="A picture of the 'Who Said That Quote?' game logo">
                         </div>
+
+                        <!--header element: contains project title-->
                         <header class="project-title">
                             <h3>"Who Said That Quote?"</h3>
                         </header>
+
+                        <!--article element: contains project description-->
                         <article class="project-description">
                             <p>
                                 A browser based game where you guess which major public figure who said the quote.
@@ -77,6 +125,8 @@
                                 live multiplayer mode possibly. Maybe even convert it to a mobile app to enjoy from the phone on 
                                 the go.
                             </p>
+
+                            <!--div element: contains project link-->
                             <div class="project-link">
                                 <p>
                                     If you would like to check out my progress so far you can find it on my github page.<br> 
@@ -87,13 +137,21 @@
                             </div>
                         </article>
                     </div>
-                    <div class="project" id="project-2">                    
+                    
+                    <!--div element: contains project 2 information-->
+                    <div class="project" id="project-2">
+                        
+                        <!--div element: contains project image-->
                         <div class="project-image">
                             <img src="./data/images/webpage.png" alt="A picture of my mock-up webpage">
                         </div>
+
+                        <!--header element: contains project title-->
                         <header class="project-title">
                             <h3>Webpage Template</h3>
                         </header>
+
+                        <!--article element: contains project description-->
                         <article class="project-description">
                             <p>
                                 This was a mock-up webpage created for a friends business he is trying to get started.
@@ -102,6 +160,8 @@
                                 he would have something he can point people to or put out to people. I told him I can use the practice 
                                 so Id do it for free. He agreed, cause why not, and this is what I came up with.
                             </p>
+
+                            <!--div element: contains project link-->
                             <div class="project-link">
                                 <p>
                                     Link Below:<br><a href="./projects/business_webpage_template/index.html" target="_blank">Business Webpage Template</a><br><br>Leave me a comment 
@@ -111,19 +171,29 @@
                             </div>
                         </article>
                     </div>
+
+                    <!--div element: contains project 3 information-->
                     <div class="project" id="project-3">
+
+                        <!--div element: contains project image-->
                         <div class="project-image">
                             <img src="./data/images/film_finder.png" alt="Opening webpage for my film finder app">
                         </div>
+
+                        <!--header element: contains project title-->
                         <header class="project-title">
                             <h3>Film Finder API App</h3>
                         </header>
+
+                        <!--article element: contains project description-->
                         <article class="project-description">
                             <p>
                                 This is a web app that uses the OMDB API to allow users to find information about different movies.
                                 Its a very simple app with a very simple UI but, I created this app to showcase my skills at interacting 
                                 with an API. I used HTML, CSS, and JavaScript.
                             </p>
+
+                            <!--div element: contains project link-->
                             <div class="project-link">
                                 <p>
                                     Link to app: <a href="./projects/film_finder/index.html" target="_blank">Film Finder</a><br>
@@ -133,28 +203,34 @@
                     </div>
                 </div>
             </section>
+
+            <!--section element: contains skills-->
             <section id="skills">
-                <div class="skills-container">
-                    <header class="skills-header" id="skills-title">
-                        <h2>Skills</h2>
-                    </header>
-                    <div class="skills"> 
-                        <i class="fab fa-html5 fa-7x"></i>
-                        <i class="fab fa-css3-alt fa-7x"></i>
-                        <i class="fab fa-js fa-7x"></i>
-                        <i class="fab fa-python fa-7x"></i>
-                        <i class="fab fa-java fa-7x"></i>
-                        <i class="fab fa-react fa-7x"></i>
-                        <i class="fab fa-git fa-7x"></i>
-                        <i class="fab fa-github fa-7x"></i>
-                        <i class="fab fa-npm fa-7x"></i>
-                        <i class="fab fa-node-js fa-7x"></i>
-                        <i class="fab fa-chrome fa-7x"></i>
-                        <i class="fab fa-linux fa-7x"></i>
-                    </div>    
-                </div>
+
+                <!--header element: contains skills title-->
+                <header class="skills-header" id="skills-title">
+                    <h2>Skills</h2>
+                </header>
+
+                <!--div element: contains skills icons-->
+                <div class="skills"> 
+                    <i class="fab fa-html5 fa-7x"></i>
+                    <i class="fab fa-css3-alt fa-7x"></i>
+                    <i class="fab fa-js fa-7x"></i>
+                    <i class="fab fa-python fa-7x"></i>
+                    <i class="fab fa-java fa-7x"></i>
+                    <i class="fab fa-react fa-7x"></i>
+                    <i class="fab fa-git fa-7x"></i>
+                    <i class="fab fa-github fa-7x"></i>
+                    <i class="fab fa-npm fa-7x"></i>
+                    <i class="fab fa-node-js fa-7x"></i>
+                    <i class="fab fa-chrome fa-7x"></i>
+                    <i class="fab fa-linux fa-7x"></i>
+                </div>    
             </section>
         </main>
+
+        <!--footer element: contains footer information-->
         <footer class="footer">
             <p>&copy; <time datetime="2024">2024</time>, Corey Hilsenbeck</p>
         </footer>
