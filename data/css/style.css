@@ -191,9 +191,9 @@ nav a:focus {
 }
 
 .project-image img {
-    width: 40em;
-    height: 40em;
-    border-radius: 40px;
+    width: 42em;
+    height: 42em;
+    border-radius: 50px;
 }
 
 #projects {
@@ -259,12 +259,14 @@ nav a:focus {
     }
 
     header {
-        margin-left: 1em;
+        width: 100%;
+        margin-left: 0.5em;
         padding: 0.5em auto;
     }
 
     main {
-        margin-left: 1em;
+        width: 100%;
+        margin-left: 0.5em;
     }
 
     h1 {
@@ -356,7 +358,7 @@ nav a:focus {
     }
     
     .about-me-image img {
-        width: 22rem;
+        width: 25rem;
         height: auto;
         margin-left: 0;
     }
@@ -409,7 +411,7 @@ nav a:focus {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 90%;
+        width: 100%;
         height: auto;
         padding: 0.5em auto;
         margin-left: 0;
@@ -440,7 +442,7 @@ nav a:focus {
     }
         
     .skills-title {
-        font-size: 2rem;
+        font-size: 3rem;
         padding-left: 0;
     }
     
@@ -450,11 +452,14 @@ nav a:focus {
         justify-content: center;
         column-gap: 0.25rem;
         row-gap: 0.25rem;
+        margin-left: 0;
         padding-left: 0;
     }
     
     .skills i {
         font-size: 5em;
+        margin-left: 0;
+        padding-left: 0;
         height: auto;
     }
 
