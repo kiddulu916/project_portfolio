@@ -360,6 +360,7 @@ nav a:focus {
     .about-me-image img {
         width: 25rem;
         height: auto;
+        margin-top: 1em;
         margin-left: 0;
     }
 
