@@ -264,7 +264,7 @@ footer {
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-left: 2em;
+        margin-left: 2.5em;
         text-align: center;
         padding: 0;
     }
@@ -339,7 +339,7 @@ footer {
     }
     
     nav a {
-        font-size: 1em;
+        font-size: 2em;
         margin: 0;
         padding: 0;
         padding-left: 0;
@@ -355,7 +355,7 @@ footer {
         padding: 0;
         padding-top: 0.5em;
         margin-bottom: 1em;
-        margin-left: 1.5em;
+        margin-left: 2em;
     }
 
     .about-me-container {
@@ -457,7 +457,7 @@ footer {
         height: auto;
         padding: 0.5em;
         margin-left: 0;
-        margin-right: 1em;
+        margin-right: 2em;
     }
     
     .project-title {
@@ -481,13 +481,14 @@ footer {
 
     #skills {
         width: 100%;
-        margin-left: 1em;
+        margin-left: 1.5em;
         padding: 1em;
     }
         
     .skills-header {
         font-size: 3em;
-        padding-left: 1em;
+        padding-right: 1em;
+        padding-left: 0;
     }
     
     .skills {
@@ -501,7 +502,7 @@ footer {
     }
     
     .skills i {
-        font-size: 5em;
+        font-size: 4em;
         margin-left: 0;
         padding-left: 0;
         height: auto;
@@ -511,7 +512,7 @@ footer {
         width: 100%;
         padding: 0;
         font-size: 1.5em;
-        margin-left: 2em;
+        margin-left: 2.5em;
         margin-top: 1em;
     }
 }
