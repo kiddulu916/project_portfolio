@@ -249,9 +249,9 @@ footer {
 @media (max-width: 1024px) and (orientation: portrait) {
     body {
         width: 100%;
-        margin: 1em;
+        margin: 0;
         margin-left: 0;
-        padding: 0;
+        padding: 1em;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -476,7 +476,7 @@ footer {
     }
     
     .project-image img {
-        width: 30em;
+        width: 20em;
         height: auto;
     }
 
