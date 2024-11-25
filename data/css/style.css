@@ -264,7 +264,7 @@ footer {
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-left: 2.5em;
+        margin-left: 3em;
         text-align: center;
         padding: 0;
     }
@@ -410,6 +410,7 @@ footer {
         height: auto;
         padding: 0;
         padding-left: 0;
+        padding-right: 0.5em;
         margin-top: 0.5em;
         margin-left: 0.5em;
     }
@@ -457,7 +458,7 @@ footer {
         height: auto;
         padding: 0.5em;
         margin-left: 0;
-        margin-right: 2em;
+        margin-right: 0;
     }
     
     .project-title {
@@ -475,7 +476,7 @@ footer {
     }
     
     .project-image img {
-        width: 20em;
+        width: 30em;
         height: auto;
     }
 
