@@ -279,7 +279,7 @@ footer {
         padding-left: 0;
         text-align: center;
         padding-right: 0;
-        font-size: 5em;
+        font-size: 4em;
     }
     
     .subtitle {
@@ -354,7 +354,8 @@ footer {
         align-items: center;
         padding: 0;
         padding-top: 0.5em;
-        margin-left: 1em;
+        margin-bottom: 1em;
+        margin-left: 1.5em;
     }
 
     .about-me-container {
@@ -456,6 +457,7 @@ footer {
         height: auto;
         padding: 0.5em;
         margin-left: 0;
+        margin-right: 1em;
     }
     
     .project-title {
@@ -479,7 +481,7 @@ footer {
 
     #skills {
         width: 100%;
-        margin-left: em;
+        margin-left: 1em;
         padding: 1em;
     }
         
@@ -509,7 +511,7 @@ footer {
         width: 100%;
         padding: 0;
         font-size: 1.5em;
-        margin-left: 1em;
+        margin-left: 2em;
         margin-top: 1em;
     }
 }
