@@ -1,0 +1,59 @@
+.Track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.TrackInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.Track h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.Track p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+.TrackAction {
+    padding: 0.5rem 1rem;
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.TrackAction:hover {
+    background-color: #159f47;
+}
+
+.TrackAction.Remove {
+    background-color: #e60000; /* Red for removal */
+}
+
+.TrackAction.Remove:hover {
+    background-color: #d40000;
+}
+
+.TrackAction.Add {
+    background-color: #1db954; /* Green for adding */
+}
+
+.TrackAction.Add:hover {
+    background-color: #159f47;
+}

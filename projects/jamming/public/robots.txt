@@ -1,0 +1,9 @@
+# robots.txt for Jammming
+
+# Allow all crawlers to access everything
+User-agent: *
+Disallow: /api/
+Disallow: /auth/
+
+# Sitemap location
+Sitemap: https://www.yourdomain.com/sitemap.xml

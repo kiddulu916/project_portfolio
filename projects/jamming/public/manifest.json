@@ -1,0 +1,14 @@
+{
+    "name": "Jammming",
+    "short_name": "Jammming",
+    "description": "Create and manage your Spotify playlists, search for tracks, albums, and artists.",
+    "start_url": "https://kiddulu916.github.io/project_portfolio/projects/jamming/",
+    "display": "standalone",
+    "background_color": "#1DB954",
+    "theme_color": "#1DB954",
+    "icons": [],
+    "scope": "/",
+    "orientation": "portrait",
+    "related_applications": [],
+    "prefer_related_applications": false
+  }
