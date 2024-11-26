@@ -3,7 +3,7 @@ import {
     getAuthUrl, 
     exchangeCodeForToken, 
     logout 
-} from '../api/SpotifyAuth';
+} from '../api/spotifyAuth';
 import {
     search,
     createPlaylist,
