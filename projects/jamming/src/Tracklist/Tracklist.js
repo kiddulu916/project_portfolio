@@ -1,6 +1,6 @@
 import React from 'react';
 import Track from '../Track/Track'; // Assuming you have the Track component
-import styles from './TrackList.module.css';
+import styles from './Tracklist.module.css';
 
 function TrackList({ tracks, onAddTrack, onRemoveTrack, isRemoval = false }) {
     // Render the track list or a message if no tracks are available

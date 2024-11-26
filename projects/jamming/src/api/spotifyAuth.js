@@ -1,5 +1,5 @@
-const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID; // Replace with your actual client ID
-const REDIRECT_URI = process.env.SPOTIFY_REDIRECT_URI; // Replace with your redirect URI
+const CLIENT_ID = '637204625e214cd6b4af3886a8a8dc24'; // Replace with your actual client ID
+const REDIRECT_URI = 'http://localhost:3000'; // Replace with your redirect URI
 const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
 const TOKEN_ENDPOINT = 'https://accounts.spotify.com/api/token';
 const SCOPES = [
