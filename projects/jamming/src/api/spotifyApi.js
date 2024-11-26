@@ -61,7 +61,7 @@ export async function addTracksToPlaylist(playlistId, trackUris, token) {
     return response.json();
 }
 
-export async function removeTrackFromPlaylist(playlistId, trackUris, token) {
+export async function removeTracksFromPlaylist(playlistId, trackUris, token) {
     if (!token) throw new Error('No Spotify access token provided');
 
     const response = await fetch(`${API_BASE_URL}/playlists/${playlistId}/tracks`, {
