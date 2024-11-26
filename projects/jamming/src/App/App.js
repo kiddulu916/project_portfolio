@@ -11,7 +11,7 @@ import {
     removeTracksFromPlaylist,
     getUserPlaylists,
     getCurrentUserProfile,
-} from './spotifyApi';
+} from '../api/spotifyApi';
 import SearchBar from '../SearchBar/SearchBar';
 import Tracklist from '../Tracklist/Tracklist';
 import Playlist from '../Playlist/Playlist';
