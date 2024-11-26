@@ -99,5 +99,28 @@
     font-size: 1rem;
     padding: 0.5rem 1.5rem;
     margin-top: 1rem;
-    background-color
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.SaveButton:hover {
+    background-color: #159f47;
+}
+
+@media (max-width: 768px) {
+    .Playlist {
+        padding: 1rem;
+    }
+
+    .Playlist-track {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Playlist-action {
+        align-self: flex-end;
+    }
 }
