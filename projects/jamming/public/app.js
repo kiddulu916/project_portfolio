@@ -8,7 +8,7 @@
  */
 
 const clientId = '637204625e214cd6b4af3886a8a8dc24'; // your clientId
-const redirectUrl = 'eg:http://localhost:3000';        // your redirect URL - must be localhost URL and/or HTTPS
+const redirectUrl = 'http://localhost:3000';        // your redirect URL - must be localhost URL and/or HTTPS
 
 const authorizationEndpoint = "https://accounts.spotify.com/authorize";
 const tokenEndpoint = "https://accounts.spotify.com/api/token";
