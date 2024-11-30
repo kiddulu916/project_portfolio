@@ -172,7 +172,7 @@ nav a:focus {
     flex-grow: 1;
 }
 
-.project-description a {
+article a {
     color: #1aff00;
     text-decoration: underline;
     font-size: 2em;
