@@ -160,13 +160,13 @@ nav a:focus {
     border: none;
     box-shadow: none;
     background-color: transparent;
-    font-size: 2em;
+    font-size: 3.5em;
 }
 
 .project-description {
     color: #f9f8eb;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
     padding-bottom: 0.25em;
     flex-grow: 1;
@@ -175,7 +175,7 @@ nav a:focus {
 .project-description a {
     color: #1aff00;
     text-decoration: underline;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .project-description a:hover {
