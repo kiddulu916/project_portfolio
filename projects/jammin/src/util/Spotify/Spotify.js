@@ -1,6 +1,6 @@
 let accessToken = '';
 const CLIENT_ID = "637204625e214cd6b4af3886a8a8dc24"
-const REDIRECT_URI = "http://localhost:3000/callback"
+const REDIRECT_URI = "https://kiddulu916.github.io/project_portfolio/projects/jammin/build/callback"
 const SCOPE = "playlist-modify-public playlist-modify-private user-library-read user-read-private playlist-read-private user-read-email playlist-read-collaborative"; 
 
 const Spotify = {

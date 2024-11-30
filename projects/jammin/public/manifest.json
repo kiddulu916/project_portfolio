@@ -8,7 +8,7 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": "http://localhost:3000/",
+  "start_url": "https://kiddulu916.github.io/project_portfolio/projects/jammin/build",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
