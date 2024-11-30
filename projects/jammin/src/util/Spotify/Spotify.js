@@ -1,6 +1,6 @@
 let accessToken = '';
 const CLIENT_ID = "637204625e214cd6b4af3886a8a8dc24"
-const REDIRECT_URI = "https://kiddulu916.github.io/project_portfolio/projects/jammin/build/callback"
+const REDIRECT_URI = "http://localhost:3000/callback"
 const SCOPE = "playlist-modify-public playlist-modify-private user-library-read user-read-private playlist-read-private user-read-email playlist-read-collaborative"; 
 
 const Spotify = {
@@ -15,10 +15,21 @@ const Spotify = {
         if (tokenInURL && expiryTime) {
             accessToken = tokenInURL[1];
             const expiresIn = Number(expiryTime[1]);
+            const expirationTime = new Date().getTime() + expiresIn * 1000);
+
             window.setTimeout(() => (accessToken = ''), expiresIn * 1000);
+            window.localStorage.setItem('SpotifyToken', JSON.stringify({ accessToken, expirationTime }));
             window.history.pushState('Access Token', null, '/');
             return accessToken;
         }
+
+        const storedToken = JSON.parse(window.localStorage.getItem('SpotifyToken'));
+        if (storedToken && storedToken.expirationTime > new Date().getTime()) {
+            accessToken = storedToken.accessToken;
+            return accessToken;
+       
+        }
+
         const redirect = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=token&scope=${encodeURI(SCOPE)}&redirect_uri=${encodeURI(REDIRECT_URI)}`;
         window.location = redirect;
     },
@@ -122,6 +133,7 @@ const Spotify = {
                 artist: item.track.artists[0].name,
                 album: item.track.album.name,
                 uri: item.track.uri,
+                preview_url: t.preview_url
             }));
         } catch (error) {
             console.error("Error fetching playlist tracks:", error.message);

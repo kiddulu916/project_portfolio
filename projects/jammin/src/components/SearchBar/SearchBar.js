@@ -12,6 +12,13 @@ function SearchBar (props) {
         setTerm(target.value);
     }
 
+    function handleSearch() {
+        props.onSearch(term);
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.set("search", term);
+        window.history.pushState(null, "", `?${urlParams.toString()}`);
+    }
+
     return (
         <div className={styles.SearchBar}>
             <input

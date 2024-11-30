@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import SearchResults from "../SearchResults/SearchResults";
 import Playlist from "../Playlist/Playlist";
@@ -6,11 +6,12 @@ import styles from "./App.module.css";
 import { Spotify } from "../../util/Spotify/Spotify";
 
 
-function App () {
+function App() {
     const [searchResults, setSearchResults] = useState([]);
     const [playlistName, setPlaylistName] = useState("New Playlist");
     const [playlistTracks, setPlaylistTracks] = useState([]);
     const [userPlaylists, setUserPlaylists] = useState([]);
+    const [isSaving, setIsSaving] = useState(false);
 
     function addTrack(track) {
         const existingTrack = playlistTracks.find((t) => t.id === track.id);
@@ -33,14 +34,25 @@ function App () {
 
     function savePlaylist() {
         const trackURIs = playlistTracks.map((t) => t.uri);
+        setIsSaving(true);
         Spotify.savePlaylist(playlistName, trackURIs).then(() => {
             updatePlaylistName("New Playlist");
             setPlaylistTracks([]);
+            setIsSaving(false);
+        }).catch(() => {
+            setIsSaving(false);
+            alert("Failed to save playlist. Please try again.");
         });
     }
 
+
     function search(term) {
-        Spotify.search(term).then((result) => setSearchResults(result));
+        Spotify.search(term).then(result => {
+            const filteredResults = result.filter(
+                track => !playlistTracks.some(playlistTrack => playlistTrack.id === track.id)
+            );
+            setSearchResults(filteredResults);
+        });
     }
 
     async function fetchUserPlaylists() {
@@ -65,6 +77,37 @@ function App () {
         }
     }
 
+    useEffect(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const savedSearch = urlParams.get("search");
+        if (savedSearch) {
+            search(savedSearch);
+            window.history.replaceState(null, "", "/");
+        }
+    }, []);
+
+    useEffect(() => {
+        const savedPlaylistName = window.localStorage.getItem('playlistName');
+        const savedPlaylistTracks = JSON.parse(window.localStorage.getItem('playlistTracks') || '[]');
+        if (savedPlaylistName) setPlaylistName(savedPlaylistName);
+        if (savedPlaylistTracks.length > 0) setPlaylistTracks(savedPlaylistTracks);
+    }, []);
+
+    useEffect(() => {
+        window.localStorage.setItem('playlistName', playlistName);
+    }, [playlistName]);
+
+    useEffect(() => {
+        window.localStorage.setItem('playlistTracks', JSON.stringify(playlistTracks));
+    }, [playlistTracks]);
+
+    if (isSaving) {
+        return (
+            <div className={styles['loading-overlay']}>
+                <div className={styles['loading-spinner']}></div>
+            </div>
+        );
+    }
 
     return (
         <div>
@@ -72,23 +115,23 @@ function App () {
                 JA<span className={styles.highlight}>MMM</span>IN<span className={styles.poweredBy}>Powered By Spotify&copy;</span>
             </h1>
             <div className={styles.App}>
-                
-                <SearchBar 
+
+                <SearchBar
                     onSearch={search}
                 />
 
                 <div className={styles["App-playlist"]}>
-                    
-                    <SearchResults 
-                        userSearchResults={searchResults} 
-                        onAdd={addTrack} 
+
+                    <SearchResults
+                        userSearchResults={searchResults}
+                        onAdd={addTrack}
                     />
 
-                    <Playlist 
-                        playlistName={playlistName} 
-                        playlistTracks={playlistTracks} 
-                        onRemove={removeTrack} 
-                        onNameChange={updatePlaylistName} 
+                    <Playlist
+                        playlistName={playlistName}
+                        playlistTracks={playlistTracks}
+                        onRemove={removeTrack}
+                        onNameChange={updatePlaylistName}
                         onSave={savePlaylist}
                         onFetchPlaylists={fetchUserPlaylists}
                         onSelectPlaylist={selectPlaylist}
@@ -96,7 +139,7 @@ function App () {
                     />
                 </div>
             </div>
-      </div>
+        </div>
     )
 }
 
