@@ -6,11 +6,18 @@ import React, { useState, useEffect } from 'react';
 const CLIENT_ID = "637204625e214cd6b4af3886a8a8dc24";
 const CLIENT_SECRET = "788297699d804a2caf859ead9ed10aa9";
 const REDIRECT_URI = "http://localhost:3000/";
-const SCOPE = "user-library-read user-read-private user-read-email playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private";
+const SCOPE = "user-library-read%20user-read-private%20user-read-email%20playlist-read-private%20playlist-read-collaborative%20playlist-modify-public%20playlist-modify-private";
 
-const generateRandomString = (length) => {
-    return crypto.randomBytes(60).toString('hex').slice(0, length);
+function generateRandomString(length = 16) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    const charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
 }
+
 const STATE = generateRandomString(16);
 
 function App() {
@@ -20,9 +27,7 @@ function App() {
     const [albums, setAlbums] = useState([]);
 
     useEffect(() => {
-        var loginParams = {
-            method: 'GET',
-            body: 'response_type=code&client_id=' + CLIENT_ID + '&scope=' + SCOPE + '&redirect_uri=' + REDIRECT_URI + '&state=' + STATE + '&show_dialog=true'
+      const loginParams = 'response_type=code&client_id=' + encodeURI(CLIENT_ID) + '&scope=' + encodeURI(SCOPE) + '&redirect_uri=' + encodeURI(REDIRECT_URI) + '&state=' + encodeURI(STATE) + '&show_dialog=true'
         }
         fetch('https://accounts.spotify.com/authorize?', loginParams)
             .then(response => response.json())
