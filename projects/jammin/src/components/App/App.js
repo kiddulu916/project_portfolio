@@ -8,10 +8,25 @@ import { Spotify } from "../../util/Spotify/Spotify";
 
 function App() {
     const [searchResults, setSearchResults] = useState([]);
-    const [playlistName, setPlaylistName] = useState("New Playlist");
+    const [playlistName, setPlaylistName] = useState("");
     const [playlistTracks, setPlaylistTracks] = useState([]);
     const [userPlaylists, setUserPlaylists] = useState([]);
     const [isSaving, setIsSaving] = useState(false);
+    const [recommendations, setRecommendations] = useState([]);
+    const [isSearching, setIsSearching] = useState(false);
+    const [searchTerm, setSearchTerm] = useState("");
+
+    useEffect(() => {
+        Spotify.getAccessToken();
+    }, []);
+
+    useEffect(() => {
+        async function fetchRecommendations() {
+            const topTracks = await Spotify.getTopTracks();
+            setRecommendations(topTracks);
+        }
+        fetchRecommendations();
+    }, []);
 
     function addTrack(track) {
         const existingTrack = playlistTracks.find((t) => t.id === track.id);
@@ -55,6 +70,11 @@ function App() {
         });
     }
 
+    function handleSearchChange(term) {
+        setSearchTerm(term); // Your existing state for the search term
+        setIsSearching(term.trim().length > 0); // Set `isSearching` to true if term exists
+    }    
+
     async function fetchUserPlaylists() {
         try {
             const playlists = await Spotify.getUserPlaylists();
@@ -78,6 +98,19 @@ function App() {
     }
 
     useEffect(() => {
+        if (isSaving) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+
+        // Cleanup to reset body style
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [isSaving]);
+
+    useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
         const savedSearch = urlParams.get("search");
         if (savedSearch) {
@@ -91,6 +124,14 @@ function App() {
         const savedPlaylistTracks = JSON.parse(window.localStorage.getItem('playlistTracks') || '[]');
         if (savedPlaylistName) setPlaylistName(savedPlaylistName);
         if (savedPlaylistTracks.length > 0) setPlaylistTracks(savedPlaylistTracks);
+    }, []);
+
+    useEffect(() => {
+        async function fetchRecommendations() {
+            const topTracks = await Spotify.getTopTracks(); // Implement in Spotify.js
+            setSearchResults(topTracks);
+        }
+        fetchRecommendations();
     }, []);
 
     useEffect(() => {
@@ -125,6 +166,8 @@ function App() {
                     <SearchResults
                         userSearchResults={searchResults}
                         onAdd={addTrack}
+                        recommendations={recommendations}
+                        isSearching={isSearching}
                     />
 
                     <Playlist

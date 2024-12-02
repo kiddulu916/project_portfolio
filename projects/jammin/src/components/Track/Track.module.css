@@ -35,3 +35,15 @@
     font-weight: 300;
     color: rgba(256, 256, 256, 0.8);
 }
+
+.Track-action {
+    cursor: pointer;
+    align-items: center;
+    padding-left: 3rem;
+    margin-left: 3rem;
+    font-size: 1rem;
+    transition: color .25s;
+    border: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+}

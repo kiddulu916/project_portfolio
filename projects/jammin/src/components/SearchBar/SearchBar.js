@@ -6,17 +6,13 @@ function SearchBar (props) {
 
     function passTerm() {
         props.onSearch(term)
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.set("search", term);
+        window.history.pushState(null, "", `?${urlParams.toString()}`);
     }
 
     function handleTermChange({ target }) {
         setTerm(target.value);
-    }
-
-    function handleSearch() {
-        props.onSearch(term);
-        const urlParams = new URLSearchParams(window.location.search);
-        urlParams.set("search", term);
-        window.history.pushState(null, "", `?${urlParams.toString()}`);
     }
 
     return (
@@ -24,6 +20,7 @@ function SearchBar (props) {
             <input
                 placeholder="Enter A Song, Album, or Artist"
                 onChange={handleTermChange}
+                onKeyDown={event => event.key === "Enter" && passTerm()}
             />
             <button className={styles.SearchButton} onClick={passTerm}>
                 SEARCH

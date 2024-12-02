@@ -3,12 +3,15 @@ import styles from "./SearchResults.module.css";
 import Tracklist from "../Tracklist/Tracklist";
 
 function SearchResults(props) {
+    const { userSearchResults, recommendations, onAdd  } = props;
+    const tracksToDisplay = userSearchResults ? userSearchResults : recommendations;
+    
     return (
         <div className={styles.SearchResults}>
             <Tracklist 
-                userSearchResults={props.userSearchResults} 
+                userSearchResults={tracksToDisplay} 
                 isRemoval={false} 
-                onAdd={props.onAdd} 
+                onAdd={onAdd} 
             />
         </div>
     )

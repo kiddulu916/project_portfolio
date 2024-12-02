@@ -1,9 +1,9 @@
 body {
-  background-image: url('your-background-image.jpg'); /* Replace with your image */
+  background-image: url('./background_photo.jpg');
   background-size: cover;
   background-position: center;
   margin: 0;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: auto; 
 }
 
 html,

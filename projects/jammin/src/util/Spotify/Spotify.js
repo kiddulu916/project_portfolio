@@ -1,7 +1,7 @@
 let accessToken = '';
 const CLIENT_ID = "637204625e214cd6b4af3886a8a8dc24"
 const REDIRECT_URI = "http://localhost:3000/callback"
-const SCOPE = "playlist-modify-public playlist-modify-private user-library-read user-read-private playlist-read-private user-read-email playlist-read-collaborative"; 
+const SCOPE = "app-remote-control playlist-modify-public playlist-modify-private user-library-read user-top-read user-read-recently-played user-read-private playlist-read-private user-read-email playlist-read-collaborative"; 
 
 const Spotify = {
     getAccessToken() {
@@ -15,7 +15,7 @@ const Spotify = {
         if (tokenInURL && expiryTime) {
             accessToken = tokenInURL[1];
             const expiresIn = Number(expiryTime[1]);
-            const expirationTime = new Date().getTime() + expiresIn * 1000);
+            const expirationTime = new Date().getTime() + expiresIn * 1000;
 
             window.setTimeout(() => (accessToken = ''), expiresIn * 1000);
             window.localStorage.setItem('SpotifyToken', JSON.stringify({ accessToken, expirationTime }));
@@ -50,8 +50,8 @@ const Spotify = {
     },
 
     async search(term) {
-        const token = this.getAccessToken();
-        const url = `https://api.spotify.com/v1/search?type=track&q=${encodeURIComponent(term)}`;
+        const token = await this.getAccessToken();
+        const url = `https://api.spotify.com/v1/search?type=track&q=${encodeURI(term)}&limit=50`;
         const options = {
             method: 'GET',
             headers: { Authorization: `Bearer ${token}` },
@@ -133,13 +133,33 @@ const Spotify = {
                 artist: item.track.artists[0].name,
                 album: item.track.album.name,
                 uri: item.track.uri,
-                preview_url: t.preview_url
+                preview_url: item.track.preview_url
             }));
         } catch (error) {
             console.error("Error fetching playlist tracks:", error.message);
             return [];
         }
     },
+
+    async getTopTracks() {
+        const token = this.getAccessToken();
+        const url = `https://api.spotify.com/v1/me/top/tracks?limit=20`;
+        const options = { headers: { Authorization: `Bearer ${token}` } };
+        
+        try {
+            const jsonResponse = await this.fetchWithErrorHandling(url, options);
+            return jsonResponse.items.map(track => ({
+                id: track.id,
+                name: track.name,
+                artist: track.artists[0].name,
+                album: track.album.name,
+                uri: track.uri,
+            }));
+        } catch (error) {
+            console.error("Error fetching top tracks:", error.message);
+            return [];
+        }
+    }    
 };
 
 export { Spotify };

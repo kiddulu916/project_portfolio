@@ -21,9 +21,9 @@ function Playlist(props) {
     return (
         <div className={styles.Playlist}>
             <input 
-                defaultValue={"Enter Playlist Name"} 
+                defaultValue={props.playlistName} 
                 onChange={handleNameChange} 
-                placeholder={props.playlistName} 
+                placeholder="Enter Playlist Name"  
             />
             
             <Tracklist 
@@ -44,7 +44,7 @@ function Playlist(props) {
                     <h3>Select a Playlist</h3>
                     <ul>
                         {props.userPlaylists.map(playlist => (
-                            <li key={playlist.id} onClick={() => props.onSelectPlaylist(playlist.id)}>
+                            <li key={playlist.id} onClick={() => props.onSelectPlaylist(playlist.id)} className={styles.PlaylistItem}>
                                 {playlist.name}
                             </li>
                         ))}

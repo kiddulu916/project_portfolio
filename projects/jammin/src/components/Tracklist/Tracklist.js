@@ -6,16 +6,20 @@ function Tracklist(props) {
     return (
         <div>
             {props.userSearchResults.map(track => (
-                <div key={track.id}>
-                    <p>{track.name} by {track.artist}</p>
-                    {track.preview_url && (
-                        <audio controls>
-                            <source src={track.preview_url} type="audio/mpeg" />
-                            Your browser does not support the audio element.
-                        </audio>
-                    )}
+                <div className={styles.Track} key={track.id}>
+                    <div className={styles['Track-details']}>
+                        <p>{track.name} by {track.artist}</p>
+                        {track.preview_url ? (
+                            <audio controls>
+                                <source src={track.preview_url} type="audio/mpeg" />
+                                Your browser does not support the audio element.
+                            </audio>
+                        ) : (
+                            <span className={styles.NoPreview}>No preview available</span>
+                        )}
+                    </div>
                     <button onClick={() => props.onAdd ? props.onAdd(track) : props.onRemove(track)}>
-                        {props.isRemoval ? 'Remove' : 'Add'}
+                        {props.isRemoval ? '-' : '+'}
                     </button>
                 </div>
             ))}
